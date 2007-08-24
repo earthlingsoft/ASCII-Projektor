@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'ASCII Projektor 2b' target in the 'ASCII Projektor 2b' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif

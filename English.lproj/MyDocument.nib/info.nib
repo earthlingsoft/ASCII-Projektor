@@ -8,11 +8,14 @@
 	<string>446.1</string>
 	<key>IBLastKnownRelativeProjectPath</key>
 	<string>../../ASCII Projektor 2b.xcodeproj</string>
+	<key>IBLockedObjects</key>
+	<array>
+		<integer>54</integer>
+	</array>
 	<key>IBOldestOS</key>
 	<integer>4</integer>
 	<key>IBOpenObjects</key>
 	<array>
-		<integer>21</integer>
 		<integer>54</integer>
 	</array>
 	<key>IBSystem Version</key>

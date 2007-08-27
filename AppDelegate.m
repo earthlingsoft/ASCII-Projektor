@@ -38,6 +38,12 @@
 	[[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"http://earthlingsoft.net/ASCII%20Projektor/"]];
 }
 
+- (IBAction) showWebsite:(id)sender
+{
+	[[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"http://earthlingsoft.net/"]];
+}
+
+
 - (IBAction) showReadme:(id)sender
 {
 	[[NSWorkspace sharedWorkspace] openFile:[[NSBundle mainBundle] pathForResource:@"Readme" ofType:@"rtf"]];

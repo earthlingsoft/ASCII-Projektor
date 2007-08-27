@@ -13,6 +13,7 @@
 }
 - (IBAction) copyASCIIMoviePlayerPath:(id) sender;
 - (IBAction) showWebpage:(id)sender;
+- (IBAction) showWebsite:(id)sender;
 - (IBAction) showReadme:(id)sender;
 - (IBAction) showVersionHistory:(id)sender;
 - (IBAction) sendEMail:(id)sender;

@@ -53,7 +53,6 @@
 	NSDocument *doc = nil;
 
 	if (transientDoc) {
-		[transientDoc setFileURL:absoluteURL];
 		[transientDoc readFromURL:absoluteURL ofType:[[NSDocumentController sharedDocumentController] typeForContentsOfURL:absoluteURL error:outError] error:outError];
 		doc = transientDoc;
 	}

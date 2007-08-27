@@ -24,10 +24,11 @@
 		[self setValue:[DEFAULTTEXTURESTRINGS objectAtIndex:0] forKey:@"textureString"];
 		[self setValue:[NSNumber numberWithBool:NO] forKey:@"invertTexture"];
 		[self setValue:[DEFAULTFONTS objectAtIndex:0] forKey:@"textureFont"];
-		[self setValue:[NSColor colorWithCalibratedRed:1.0 green:1.0 blue:0.3333 alpha:1.0] forKey:@"backgroundColour"];
-		[self setValue:[NSColor blackColor] forKey:@"textColour"];
+		[self setValue:[NSColor colorWithCalibratedRed:31.0/255.0 green:34.0/255.0 blue:36.0/255.0 alpha:1.0] forKey:@"backgroundColour"];
+		[self setValue:[NSColor colorWithCalibratedRed:237.0/255.0 green:221.0/255.0 blue:193.0/255.0 alpha:1.0] forKey:@"textColour"];
 		[self setValue:[NSNumber numberWithFloat:1.5] forKey:@"scale"];
-		[self setValue:[NSNumber numberWithFloat:10.0] forKey:@"fontSize"];
+		[self setValue:[NSNumber numberWithFloat:3.1] forKey:@"maximumScale"];
+		[self setValue:[NSNumber numberWithFloat:15.0] forKey:@"fontSize"];
 		[self setValue:[NSNumber numberWithInt:1] forKey:@"imageSource"];
 		[self setValue:[NSNumber numberWithBool:YES] forKey:@"reflect"];
 		[self setValue:[NSNumber numberWithInt:0] forKey:@"backgroundType"];
@@ -139,12 +140,34 @@
 		[self updateDefaultsForKey:@"filmPath" withDefaultsArrayKey:PATHARRAYKEY defaultArray:DEFAULTFILMPATHS];
 		[self setValue:[NSNumber numberWithInt:1] forKey:@"filmSource"]; // switch to film mode
 	}
+	if ([keyPath isEqualToString:@"filmSource"]) {
+		int newSource = [[self valueForKey:@"filmSource"] intValue];
+		if (newSource == 0) { // camera
+			[self updateScaleForSize:NSMakeSize(640.0, 480.0)]; // assume this size for camera
+		}
+		else if (newSource == 1 ) {
+			NSError * theErr;
+			QTMovie * theMovie = [QTMovie movieWithFile:[self valueForKey:@"filmPath"] error:&theErr];
+			NSSize movieSize = [[theMovie attributeForKey:QTMovieNaturalSizeAttribute] sizeValue];
+			[self updateScaleForSize:movieSize];			
+		}
+	}
 	else if ([keyPath isEqualToString:@"textureString"]) {
 		[self updateDefaultsForKey:@"textureString" withDefaultsArrayKey:TEXTURESTRINGARRAYKEY defaultArray:DEFAULTTEXTURESTRINGS];
 	}
 	else if ([keyPath isEqualToString:@"textureFont"]) {
 		[self updateDefaultsForKey:@"textureFont" withDefaultsArrayKey:FONTARRAYKEY defaultArray:DEFAULTFONTS];
 	}
+}
+
+
+- (void) updateScaleForSize:(NSSize) size {
+	float newMaximumScale = 2047.0 / MAX(size.width, size.height);
+	NSNumber * newMaximumScaleNumber = [NSNumber numberWithFloat: newMaximumScale];
+	[self setValue:newMaximumScaleNumber forKey:@"maximumScale"];
+	if (scale > newMaximumScale) {
+		[self setValue:newMaximumScaleNumber forKey:@"scale"];
+	}			
 }
 
 

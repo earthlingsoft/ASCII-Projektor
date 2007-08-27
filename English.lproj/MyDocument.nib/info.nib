@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>IBDocumentLocation</key>
-	<string>69 10 356 240 0 0 1280 778 </string>
+	<string>39 23 356 240 0 0 1280 778 </string>
 	<key>IBFramework Version</key>
 	<string>446.1</string>
 	<key>IBLastKnownRelativeProjectPath</key>
@@ -12,8 +12,8 @@
 	<integer>4</integer>
 	<key>IBOpenObjects</key>
 	<array>
-		<integer>54</integer>
 		<integer>21</integer>
+		<integer>54</integer>
 	</array>
 	<key>IBSystem Version</key>
 	<string>8S2146</string>

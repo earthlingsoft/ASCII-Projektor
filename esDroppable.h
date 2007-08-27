@@ -8,6 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import <QuartzComposer/QCView.h>
+#import <QTKit/QTKit.h>
 #import "ApplicationServices/ApplicationServices.h"
 #import "MyDocument.h"
 
@@ -25,4 +26,5 @@
 
 @interface NSString (esUTICheck) 
 - (BOOL) fileAtPathConformsToUTI:(NSString *) UTI;
+- (BOOL) APWillAcceptPath;
 @end

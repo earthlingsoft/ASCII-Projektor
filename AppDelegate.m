@@ -10,6 +10,29 @@
 
 
 @implementation AppDelegate
+
+
+
++ (void) initialize {
+	[[NSUserDefaultsController sharedUserDefaultsController] setInitialValues:[NSDictionary dictionaryWithObjectsAndKeys:
+		@"/System/Library/CoreServices/Setup Assistant.app/Contents/Resources/TransitionSection.bundle/Contents/Resources/intro.mov", @"retroFilmPath",
+		[NSNumber numberWithInt:120], @"retroColumnCount",
+		[NSArchiver archivedDataWithRootObject:[NSColor colorWithDeviceRed:203.0/255.0 green:238.0/255.0 blue:173.0/255.0 alpha:0.0]], @"retroColour",
+		[NSArchiver archivedDataWithRootObject:[NSColor colorWithDeviceRed:0.0 green:0.0 blue:0.0 alpha:0.90]], @"retroBackgroundColour",
+		[NSNumber numberWithBool:NO], @"retroCloseTerminalWhenFinished", 
+		nil]];	
+	[[NSColorPanel sharedColorPanel] setShowsAlpha:YES];
+}
+
+
+- (IBAction) copyASCIIMoviePlayerPath:(id) sender {
+	NSString * toolpath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"ASCIIMoviePlayer"];
+	NSPasteboard * pb = [NSPasteboard generalPasteboard];
+	[pb declareTypes:[NSArray arrayWithObjects:NSStringPboardType, nil] owner:nil];
+	[pb setString:toolpath forType:NSStringPboardType];
+	[pb setPropertyList:[NSArray arrayWithObject:toolpath] forType:NSFilenamesPboardType];
+}
+
 - (IBAction) showWebpage:(id)sender
 {
 	[[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"http://earthlingsoft.net/ASCII%20Projektor/"]];
@@ -34,29 +57,6 @@
 - (IBAction) pay:(id)sender {
 	[[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString:@"https://www.paypal.com/xclick/business=earthlingsoft%40earthlingsoft.net&item_name=ASCII%20Projektor&no_shipping=1&cn=Comments&tax=0&currency_code=EUR&amount=5.00"]];
 }
-
-/*
-- (BOOL)application:(NSApplication *)theApplication openFile:(NSString *)filename {
-	NSArray * documents = [NSApp orderedDocuments];
-	NSError * err;
-	NSURL * documentURL = [NSURL fileURLWithPath:filename];
-	NSString * documentType = [[NSDocumentController sharedDocumentController] typeForContentsOfURL:documentURL error:&err];
-	
-	if ([documents count] != 0) {
-		// there is an open document ...
-		NSDocument * firstDocument = [documents objectAtIndex:0];
-		if (![firstDocument isDocumentEdited]) {
-			//... which is unedited
-			// thus replace it with the newly opened one
-			if (!documentType) return NO;						
-			else return [firstDocument revertToContentsOfURL:documentURL ofType:documentType error:&err];
-		}
-	}
-	// otherwise just open normally
-	return ([[MyDocument alloc] initWithContentsOfURL:documentURL ofType:documentType error:&err] != nil);
-}
-*/
-
 
 
 #pragma mark UTILITY

@@ -9,13 +9,13 @@
 
 #import <Cocoa/Cocoa.h>
 #import <QuartzComposer/QCView.h>
-// #import <QTKit/QTMovie.h>
+#import <QTKit/QTMovie.h>
 #import "ComboBoxDataSources.h"
 
 #define ASCIIPROJEKTORFILETYPE @"ASCII Projektion"
 #define FILMFILETYPE @"Film"
 
-#define DATAKEYS [NSArray arrayWithObjects:@"textureString", @"invertTexture", @"textureFont", @"backgroundColour", @"textColour", @"scale", @"filmPath", @"fontSize", @"filmSource", @"reflect", @"backgroundEffect", @"backgroundContrast", @"backgroundSaturation", @"backgroundType", @"backgroundBlur", @"gamma", @"rotateTexture",  nil]
+#define DATAKEYS [NSArray arrayWithObjects:@"textureString", @"invertTexture", @"textureFont", @"backgroundColour", @"textColour", @"scale",  @"filmPath", @"fontSize", @"filmSource", @"reflect", @"backgroundEffect", @"backgroundContrast", @"backgroundSaturation", @"backgroundType", @"backgroundBlur", @"gamma", @"rotateTexture",  nil]
 
 
 @interface MyDocument : NSDocument
@@ -28,6 +28,7 @@
 	NSColor * backgroundColour;
 	NSColor * textColour;
 	float scale;
+	float maximumScale;
 	float fontSize;
 	int imageSource;
 	BOOL reflect;
@@ -45,7 +46,7 @@
 
 - (void) setPatchValueFromPreference:(NSString*) preferenceKey;
 - (void) updateDefaultsForKey:(NSString*) valueKey withDefaultsArrayKey:(NSString *) defaultsKey defaultArray: (NSArray*) defaultArray;
-
+- (void) updateScaleForSize:(NSSize) size;
 
 	/* delegate methods */
 - (BOOL)control:(NSControl *)control isValidObject:(id)object;

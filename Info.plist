@@ -32,7 +32,7 @@
 		</dict>
 		<dict>
 			<key>CFBundleTypeIconFile</key>
-			<string></string>
+			<string>ASCII-Projektor-File-Icon</string>
 			<key>CFBundleTypeName</key>
 			<string>ASCII Projektion</string>
 			<key>CFBundleTypeOSTypes</key>
@@ -69,6 +69,8 @@
 	<string>esAP</string>
 	<key>CFBundleVersion</key>
 	<string>3</string>
+	<key>NSAppleScriptEnabled</key>
+	<string>YES</string>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>

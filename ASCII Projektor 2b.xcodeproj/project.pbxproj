@@ -7,21 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C0485920C81ADC200509B4D /* ASCIIMoviePlayer in Resources */ = {isa = PBXBuildFile; fileRef = 6C0485910C81ADC200509B4D /* ASCIIMoviePlayer */; };
+		6C0485D10C81B04200509B4D /* RetroController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6C0485CF0C81B04200509B4D /* RetroController.h */; };
+		6C0485D20C81B04200509B4D /* RetroController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0485D00C81B04200509B4D /* RetroController.m */; };
+		6C0486F20C81F90A00509B4D /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C0486F10C81F90A00509B4D /* QTKit.framework */; };
+		6C0488C60C8242AC00509B4D /* ASCII-Projektor-File-Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 6C0488C50C8242AC00509B4D /* ASCII-Projektor-File-Icon.icns */; };
 		6C1597BC0C785E6900635B8F /* QuartzComposer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C1597BB0C785E6900635B8F /* QuartzComposer.framework */; };
 		6C1597CC0C78647800635B8F /* ComboBoxDataSources.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C1597CB0C78647800635B8F /* ComboBoxDataSources.m */; };
 		6C15996F0C7889FE00635B8F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6C15994E0C7888AD00635B8F /* Localizable.strings */; };
 		6C159AC40C78A06600635B8F /* ASCII Projektor.icns in Resources */ = {isa = PBXBuildFile; fileRef = 6C159AC30C78A06600635B8F /* ASCII Projektor.icns */; };
 		6C159AED0C78A1ED00635B8F /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C159AEC0C78A1ED00635B8F /* Sparkle.framework */; };
 		6C159B050C78A21E00635B8F /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6C159AEC0C78A1ED00635B8F /* Sparkle.framework */; };
-		6C159B4B0C78AAA400635B8F /* AppDelegate.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6C159B490C78AAA400635B8F /* AppDelegate.h */; };
 		6C159B4C0C78AAA400635B8F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C159B4A0C78AAA400635B8F /* AppDelegate.m */; };
 		6C159B550C78AC8F00635B8F /* Readme.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 6C159B530C78AC8F00635B8F /* Readme.rtf */; };
 		6C159B5C0C78AE3200635B8F /* Version History.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 6C159B5A0C78AE3200635B8F /* Version History.rtf */; };
-		6C2E73B10C7EEAC90066E07C /* MyDocumentController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6CFD4A430C7E38EF00B1469F /* MyDocumentController.h */; };
 		6CA7F7220C7CC6360021D876 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CA7F7210C7CC6360021D876 /* QTKit.framework */; };
-		6CA7F7C40C7CD01B0021D876 /* ComboBoxDataSources.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6C1597CA0C78647800635B8F /* ComboBoxDataSources.h */; };
-		6CA7F7C50C7CD01F0021D876 /* MyDocument.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2A37F4AEFDCFA73011CA2CEA /* MyDocument.h */; };
-		6CA7F8BE0C7CD8D50021D876 /* esDroppable.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6CA7F8BC0C7CD8D50021D876 /* esDroppable.h */; };
 		6CA7F8BF0C7CD8D50021D876 /* esDroppable.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CA7F8BD0C7CD8D50021D876 /* esDroppable.m */; };
 		6CFD4A450C7E38EF00B1469F /* MyDocumentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFD4A440C7E38EF00B1469F /* MyDocumentController.m */; };
 		8D15AC2C0486D014006FF6A4 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */; };
@@ -41,11 +41,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				6C159B050C78A21E00635B8F /* Sparkle.framework in CopyFiles */,
-				6C159B4B0C78AAA400635B8F /* AppDelegate.h in CopyFiles */,
-				6CA7F7C40C7CD01B0021D876 /* ComboBoxDataSources.h in CopyFiles */,
-				6CA7F7C50C7CD01F0021D876 /* MyDocument.h in CopyFiles */,
-				6CA7F8BE0C7CD8D50021D876 /* esDroppable.h in CopyFiles */,
-				6C2E73B10C7EEAC90066E07C /* MyDocumentController.h in CopyFiles */,
+				6C0485D10C81B04200509B4D /* RetroController.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +60,11 @@
 		2A37F4C4FDCFA73011CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32DBCF750370BD2300C91783 /* ASCII Projektor 2b_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ASCII Projektor 2b_Prefix.pch"; sourceTree = "<group>"; };
+		6C0485910C81ADC200509B4D /* ASCIIMoviePlayer */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = ASCIIMoviePlayer; path = ../../../Shared/builds/Deployment/ASCIIMoviePlayer; sourceTree = SOURCE_ROOT; };
+		6C0485CF0C81B04200509B4D /* RetroController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RetroController.h; sourceTree = "<group>"; };
+		6C0485D00C81B04200509B4D /* RetroController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RetroController.m; sourceTree = "<group>"; };
+		6C0486F10C81F90A00509B4D /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
+		6C0488C50C8242AC00509B4D /* ASCII-Projektor-File-Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = "ASCII-Projektor-File-Icon.icns"; path = "Extras/ASCII-Projektor-File-Icon.icns"; sourceTree = "<group>"; };
 		6C1597BB0C785E6900635B8F /* QuartzComposer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzComposer.framework; path = /System/Library/Frameworks/Quartz.framework/Versions/A/Frameworks/QuartzComposer.framework; sourceTree = "<absolute>"; };
 		6C1597CA0C78647800635B8F /* ComboBoxDataSources.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComboBoxDataSources.h; sourceTree = "<group>"; };
 		6C1597CB0C78647800635B8F /* ComboBoxDataSources.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComboBoxDataSources.m; sourceTree = "<group>"; };
@@ -77,8 +78,8 @@
 		6CA7F7210C7CC6360021D876 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
 		6CA7F8BC0C7CD8D50021D876 /* esDroppable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = esDroppable.h; sourceTree = "<group>"; };
 		6CA7F8BD0C7CD8D50021D876 /* esDroppable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = esDroppable.m; sourceTree = "<group>"; };
-		6CFD4A430C7E38EF00B1469F /* MyDocumentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyDocumentController.h; path = "/Volumes/Kalle/Users/ssp/Developer/ASCII Projektor 2b/MyDocumentController.h"; sourceTree = "<absolute>"; };
-		6CFD4A440C7E38EF00B1469F /* MyDocumentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyDocumentController.m; path = "/Volumes/Kalle/Users/ssp/Developer/ASCII Projektor 2b/MyDocumentController.m"; sourceTree = "<absolute>"; };
+		6CFD4A430C7E38EF00B1469F /* MyDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDocument.h; sourceTree = "<group>"; };
+		6CFD4A440C7E38EF00B1469F /* MyDocumentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDocumentController.m; sourceTree = "<group>"; };
 		8D15AC360486D014006FF6A4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D15AC370486D014006FF6A4 /* ASCII Projektor 2b.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ASCII Projektor 2b.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -92,6 +93,7 @@
 				6C1597BC0C785E6900635B8F /* QuartzComposer.framework in Frameworks */,
 				6C159AED0C78A1ED00635B8F /* Sparkle.framework in Frameworks */,
 				6CA7F7220C7CC6360021D876 /* QTKit.framework in Frameworks */,
+				6C0486F20C81F90A00509B4D /* QTKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +103,7 @@
 		1058C7A6FEA54F5311CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6C0486F10C81F90A00509B4D /* QTKit.framework */,
 				1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */,
 			);
 			name = "Linked Frameworks";
@@ -146,12 +149,14 @@
 				6C159B4A0C78AAA400635B8F /* AppDelegate.m */,
 				2A37F4AEFDCFA73011CA2CEA /* MyDocument.h */,
 				2A37F4ACFDCFA73011CA2CEA /* MyDocument.m */,
-				6CFD4A430C7E38EF00B1469F /* MyDocumentController.h */,
+				6CFD4A430C7E38EF00B1469F /* MyDocument.h */,
 				6CFD4A440C7E38EF00B1469F /* MyDocumentController.m */,
 				6C1597CA0C78647800635B8F /* ComboBoxDataSources.h */,
 				6C1597CB0C78647800635B8F /* ComboBoxDataSources.m */,
 				6CA7F8BC0C7CD8D50021D876 /* esDroppable.h */,
 				6CA7F8BD0C7CD8D50021D876 /* esDroppable.m */,
+				6C0485CF0C81B04200509B4D /* RetroController.h */,
+				6C0485D00C81B04200509B4D /* RetroController.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -168,7 +173,9 @@
 		2A37F4B8FDCFA73011CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6C0485910C81ADC200509B4D /* ASCIIMoviePlayer */,
 				6C159AC30C78A06600635B8F /* ASCII Projektor.icns */,
+				6C0488C50C8242AC00509B4D /* ASCII-Projektor-File-Icon.icns */,
 				6C159B5A0C78AE3200635B8F /* Version History.rtf */,
 				6C159B530C78AC8F00635B8F /* Readme.rtf */,
 				2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */,
@@ -241,6 +248,8 @@
 				6C159AC40C78A06600635B8F /* ASCII Projektor.icns in Resources */,
 				6C159B550C78AC8F00635B8F /* Readme.rtf in Resources */,
 				6C159B5C0C78AE3200635B8F /* Version History.rtf in Resources */,
+				6C0485920C81ADC200509B4D /* ASCIIMoviePlayer in Resources */,
+				6C0488C60C8242AC00509B4D /* ASCII-Projektor-File-Icon.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +266,7 @@
 				6C159B4C0C78AAA400635B8F /* AppDelegate.m in Sources */,
 				6CA7F8BF0C7CD8D50021D876 /* esDroppable.m in Sources */,
 				6CFD4A450C7E38EF00B1469F /* MyDocumentController.m in Sources */,
+				6C0485D20C81B04200509B4D /* RetroController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

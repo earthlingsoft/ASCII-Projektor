@@ -2,6 +2,7 @@
     IBClasses = (
         {
             ACTIONS = {
+                copyASCIIMoviePlayerPath = id; 
                 pay = id; 
                 sendEMail = id; 
                 showReadme = id; 
@@ -17,6 +18,13 @@
             CLASS = MyDocumentController; 
             LANGUAGE = ObjC; 
             SUPERCLASS = NSDocumentController; 
+        }, 
+        {
+            ACTIONS = {playInTerminal = id; }; 
+            CLASS = RetroController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {movieView = QTMovieView; pathField = NSTextField; retroWindow = NSWindow; }; 
+            SUPERCLASS = NSObject; 
         }, 
         {
             ACTIONS = {checkForUpdates = id; }; 

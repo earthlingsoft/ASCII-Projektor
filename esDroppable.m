@@ -21,7 +21,7 @@
     if ( [[pboard types] containsObject:NSFilenamesPboardType] ) {
 		NSArray *files = [pboard propertyListForType:NSFilenamesPboardType];
 		NSString * path = [files objectAtIndex:0];
-		if ([path fileAtPathConformsToUTI:@"public.movie"]) {
+		if ([path APWillAcceptPath]) {
 			return NSDragOperationLink;
 		}
     }
@@ -59,7 +59,7 @@
     if ( [[pboard types] containsObject:NSFilenamesPboardType] ) {
 		NSArray *files = [pboard propertyListForType:NSFilenamesPboardType];
 		NSString * path = [files objectAtIndex:0];
-		if ([path fileAtPathConformsToUTI:@"public.movie"]) {
+		if ([path APWillAcceptPath]) {
 			return NSDragOperationLink;
 		}
     }
@@ -115,6 +115,28 @@
 	}
 	return doesConform;
 }
+
+
+
+- (BOOL) APWillAcceptPath {
+	if ([self fileAtPathConformsToUTI:@"public.movie"]) {
+		if ([QTMovie canInitWithFile:self]) {
+			NSError * theErr;
+			QTMovie * theMovie = [QTMovie movieWithFile:self error:&theErr];
+			if (theMovie) {
+				 // NSNumber * hasDuration = [theMovie attributeForKey:QTMovieHasDurationAttribute]; // DOES NOT WORK!
+				 // NSNumber * isLinear = [theMovie attributeForKey:QTMovieIsLinearAttribute]; // DOES NOT WORK!
+				NSNumber * hasVideo = [theMovie attributeForKey:QTMovieHasVideoAttribute]; // DOESN'T REALLY HELP HERE; JUST PLAYING
+				if([hasVideo boolValue]) {
+					return YES;
+				}
+			}
+		}
+	}	
+	return NO;
+}
+
+
 
 @end
 

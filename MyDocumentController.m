@@ -14,7 +14,6 @@
 @implementation MyDocumentController
 - (NSDocument *)transientDocumentToReplace {
     NSArray *documents = [self documents];
-    NSDocument *transientDoc = nil;
 	int openDocuments = [documents count];
 	if(openDocuments == 1) {
 		NSDocument * theDoc = [documents objectAtIndex:0];

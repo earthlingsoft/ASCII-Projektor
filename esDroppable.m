@@ -43,6 +43,7 @@
     return YES;
 }
 
+
 @end
 
 
@@ -79,6 +80,8 @@
 	
 	return YES;
 }
+
+
 
 @end
 
@@ -124,7 +127,7 @@
 			NSError * theErr;
 			QTMovie * theMovie = [QTMovie movieWithFile:self error:&theErr];
 			if (theMovie) {
-				 // NSNumber * hasDuration = [theMovie attributeForKey:QTMovieHasDurationAttribute]; // DOES NOT WORK!
+				//  NSNumber * hasDuration = [theMovie attributeForKey:QTMovieHasDurationAttribute]; // DOES NOT WORK!
 				 // NSNumber * isLinear = [theMovie attributeForKey:QTMovieIsLinearAttribute]; // DOES NOT WORK!
 				NSNumber * hasVideo = [theMovie attributeForKey:QTMovieHasVideoAttribute]; // DOESN'T REALLY HELP HERE; JUST PLAYING
 				if([hasVideo boolValue]) {

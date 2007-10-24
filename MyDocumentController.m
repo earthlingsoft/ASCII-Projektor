@@ -55,13 +55,13 @@
 	if (transientDoc) {
 		[transientDoc readFromURL:absoluteURL ofType:[[NSDocumentController sharedDocumentController] typeForContentsOfURL:absoluteURL error:outError] error:outError];
 		doc = transientDoc;
+		[doc setFileURL:absoluteURL];
 	}
 	if (!doc) { // do this if there is no document to replace OR if replacing failed
 		doc = [super openDocumentWithContentsOfURL:absoluteURL display:(displayDocument && !transientDoc) error:outError];
     }
     if (!doc) return nil;
     
-    //if (transientDoc != nil) [self replaceTransientDocument:transientDoc withDocument:doc display:YES];
     
     return doc;
 }

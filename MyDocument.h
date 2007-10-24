@@ -11,6 +11,7 @@
 #import <QuartzComposer/QCView.h>
 #import <QTKit/QTMovie.h>
 #import "ComboBoxDataSources.h"
+#import "ESFullScreenWindow.h"
 
 #define ASCIIPROJEKTORFILETYPE @"ASCII Projektion"
 #define FILMFILETYPE @"Film"
@@ -40,13 +41,22 @@
 	float gamma;
 	BOOL rotateTexture;
 	
-	IBOutlet QCView * myPatchController;
+	IBOutlet QCView * myPatchController; // unfortunate name!!
 	IBOutlet NSComboBox * filmPathComboBox;
+	IBOutlet NSWindow * displayWindow;
+	IBOutlet ESFullScreenWindow * mScreenWindow;
+	
+	NSRect o_saved_frame;
+
 }
 
 - (void) setPatchValueFromPreference:(NSString*) preferenceKey;
 - (void) updateDefaultsForKey:(NSString*) valueKey withDefaultsArrayKey:(NSString *) defaultsKey defaultArray: (NSArray*) defaultArray;
 - (void) updateScaleForSize:(NSSize) size;
+- (void) startFullScreen;
+- (void) stopFullScreen;
+- (IBAction) fullScreenStart: (id) sender;
+- (IBAction) fullScreenStop: (id) sender;
 
 	/* delegate methods */
 - (BOOL)control:(NSControl *)control isValidObject:(id)object;

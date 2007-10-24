@@ -26,7 +26,7 @@
 		[self setValue:[DEFAULTFONTS objectAtIndex:0] forKey:@"textureFont"];
 		[self setValue:[NSColor colorWithCalibratedRed:31.0/255.0 green:34.0/255.0 blue:36.0/255.0 alpha:1.0] forKey:@"backgroundColour"];
 		[self setValue:[NSColor colorWithCalibratedRed:237.0/255.0 green:221.0/255.0 blue:193.0/255.0 alpha:1.0] forKey:@"textColour"];
-		[self setValue:[NSNumber numberWithFloat:1.5] forKey:@"scale"];
+		[self setValue:[NSNumber numberWithFloat:1.3] forKey:@"scale"];
 		[self setValue:[NSNumber numberWithFloat:3.1] forKey:@"maximumScale"];
 		[self setValue:[NSNumber numberWithFloat:15.0] forKey:@"fontSize"];
 		[self setValue:[NSNumber numberWithInt:1] forKey:@"imageSource"];
@@ -143,7 +143,7 @@
 	if ([keyPath isEqualToString:@"filmSource"]) {
 		int newSource = [[self valueForKey:@"filmSource"] intValue];
 		if (newSource == 0) { // camera
-			[self updateScaleForSize:NSMakeSize(640.0, 480.0)]; // assume this size for camera
+			 [self updateScaleForSize:NSMakeSize(640.0, 480.0)]; // assume this size for camera
 		}
 		else if (newSource == 1 ) {
 			NSError * theErr;
@@ -164,11 +164,103 @@
 - (void) updateScaleForSize:(NSSize) size {
 	float newMaximumScale = 2047.0 / MAX(size.width, size.height);
 	NSNumber * newMaximumScaleNumber = [NSNumber numberWithFloat: newMaximumScale];
-	[self setValue:newMaximumScaleNumber forKey:@"maximumScale"];
+	// [self setValue:newMaximumScaleNumber forKey:@"maximumScale"];
 	if (scale > newMaximumScale) {
-		[self setValue:newMaximumScaleNumber forKey:@"scale"];
+		// [self setValue:newMaximumScaleNumber forKey:@"scale"];
 	}			
 }
+
+
+- (BOOL)windowShouldZoom:(NSWindow *)sender toFrame:(NSRect)newFrame
+{
+	[self startFullScreen];
+	return NO;
+}
+
+
+-(IBAction) fullScreenStart:(id) sender {
+	[self startFullScreen];
+}
+
+- (void) startFullScreen  {
+	
+	// Get the screen information.
+    NSScreen* mainScreen = [NSScreen mainScreen];
+    NSDictionary* screenInfo = [mainScreen deviceDescription];
+    NSNumber* screenID = [screenInfo objectForKey:@"NSScreenNumber"];
+	
+    // Capture the screen.
+    CGDirectDisplayID displayID = (CGDirectDisplayID)[screenID longValue];
+    CGDisplayErr err =  CGDisplayCapture(displayID);
+    if (err == CGDisplayNoErr)
+    {
+        // Create the full-screen window if it doesn’t already  exist.
+        if (!mScreenWindow)
+        {
+            // Create the full-screen window.
+            NSRect winRect = [mainScreen frame];
+            mScreenWindow = [[ESFullScreenWindow alloc] initWithContentRect:winRect
+														styleMask:NSBorderlessWindowMask
+														  backing:NSBackingStoreBuffered
+															defer:NO
+														   screen:[NSScreen mainScreen]];
+			
+            // Establish the window attributes.
+            [mScreenWindow setReleasedWhenClosed:NO];
+            [mScreenWindow setDisplaysWhenScreenProfileChanges:YES];
+        }
+        [mScreenWindow setDelegate:self];
+		[mScreenWindow setValue:self forKey:@"owner"];
+			
+        [mScreenWindow setContentView:myPatchController];
+		 [myPatchController setEventForwardingMask:0];
+        [myPatchController setNeedsDisplay:YES];
+		
+        // Make the screen window the current document window.
+		[displayWindow retain]; // make sure we don't lose the window when it's not held by the WindowController
+        NSWindowController* winController = [[self windowControllers] objectAtIndex:0];
+        [winController setWindow:mScreenWindow];
+		
+        // The window has to be above the level of the shield window.
+        int32_t     shieldLevel = CGShieldingWindowLevel();
+        [mScreenWindow setLevel:shieldLevel];
+		
+        // Show the window.
+        [mScreenWindow makeKeyAndOrderFront:nil];
+		[mScreenWindow makeFirstResponder:mScreenWindow];
+		[NSCursor hide];
+		// NSLog (@"%i", [mScreenWindow ignoresMouseEvents]);
+		// NSLog(@"%i", [mScreenWindow isKeyWindow]);
+		// NSLog([[mScreenWindow firstResponder] description]);
+		// NSLog(@"%i", [myPatchController eventForwardingMask]);	
+	}
+}	
+
+
+- (IBAction) fullScreenStop: (id) sender {
+	[self stopFullScreen];
+}
+
+- (void) stopFullScreen
+{
+	// NSLog(@"stopFullScreen");
+	[mScreenWindow orderOut:self];
+	NSWindowController* winController = [[self windowControllers] objectAtIndex:0];
+	[winController setWindow:displayWindow];
+	[displayWindow setContentView:myPatchController];
+	[NSCursor unhide];
+	[displayWindow release]; // undo our extra retain on the window now that it's held by the WindowController again
+	
+	// Release the display(s)
+	if (CGDisplayRelease( kCGDirectMainDisplay ) != kCGErrorSuccess) {
+		NSLog( @"Couldn't release the display(s)!" );
+		// Note: if you display an error dialog here, make sure you set
+		// its window level to the same one as the shield window level,
+		// or the user won't see anything.
+	}
+}
+
+
 
 
 - (void) updateDefaultsForKey:(NSString*) valueKey withDefaultsArrayKey:(NSString *) defaultsKey defaultArray: (NSArray*) defaultArray {
@@ -205,7 +297,6 @@
 - (BOOL)control:(NSControl *)control isValidObject:(id)object {
 	return YES;
 }
-
 
 
 @end

@@ -1,28 +1,87 @@
-{
-    IBClasses = (
-        {CLASS = FilmPathComboBoxDataSource; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
-        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
-        {CLASS = FontComboBoxDataSource; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
-        {
-            CLASS = MyDocument; 
-            LANGUAGE = ObjC; 
-            OUTLETS = {filmPathComboBox = NSComboBox; myPatchController = QCView; }; 
-            SUPERCLASS = NSDocument; 
-        }, 
-        {CLASS = NSComboBox; LANGUAGE = ObjC; SUPERCLASS = NSTextField; }, 
-        {CLASS = NSTextField; LANGUAGE = ObjC; SUPERCLASS = NSControl; }, 
-        {
-            CLASS = TextureStringComboBoxDataSource; 
-            LANGUAGE = ObjC; 
-            SUPERCLASS = NSObject; 
-        }, 
-        {CLASS = esDroppableComboBox; LANGUAGE = ObjC; SUPERCLASS = NSComboBox; }, 
-        {
-            CLASS = esDroppableQCView; 
-            LANGUAGE = ObjC; 
-            OUTLETS = {document = MyDocument; }; 
-            SUPERCLASS = QCView; 
-        }
-    ); 
-    IBVersion = 1; 
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IBClasses</key>
+	<array>
+		<dict>
+			<key>CLASS</key>
+			<string>esDroppableQCView</string>
+			<key>LANGUAGE</key>
+			<string>ObjC</string>
+			<key>OUTLETS</key>
+			<dict>
+				<key>document</key>
+				<string>MyDocument</string>
+			</dict>
+			<key>SUPERCLASS</key>
+			<string>QCView</string>
+		</dict>
+		<dict>
+			<key>CLASS</key>
+			<string>NSComboBox</string>
+			<key>LANGUAGE</key>
+			<string>ObjC</string>
+			<key>SUPERCLASS</key>
+			<string>NSTextField</string>
+		</dict>
+		<dict>
+			<key>CLASS</key>
+			<string>NSTextField</string>
+			<key>LANGUAGE</key>
+			<string>ObjC</string>
+			<key>SUPERCLASS</key>
+			<string>NSControl</string>
+		</dict>
+		<dict>
+			<key>CLASS</key>
+			<string>FirstResponder</string>
+			<key>LANGUAGE</key>
+			<string>ObjC</string>
+			<key>SUPERCLASS</key>
+			<string>NSObject</string>
+		</dict>
+		<dict>
+			<key>ACTIONS</key>
+			<dict>
+				<key>fullScreenStart</key>
+				<string>id</string>
+				<key>fullScreenStop</key>
+				<string>id</string>
+			</dict>
+			<key>CLASS</key>
+			<string>MyDocument</string>
+			<key>LANGUAGE</key>
+			<string>ObjC</string>
+			<key>OUTLETS</key>
+			<dict>
+				<key>displayWindow</key>
+				<string>NSWindow</string>
+				<key>filmPathComboBox</key>
+				<string>NSComboBox</string>
+				<key>mScreenWindow</key>
+				<string>ESFullScreenWindow</string>
+				<key>myPatchController</key>
+				<string>QCView</string>
+			</dict>
+			<key>SUPERCLASS</key>
+			<string>NSDocument</string>
+		</dict>
+		<dict>
+			<key>CLASS</key>
+			<string>ESFullScreenWindow</string>
+			<key>LANGUAGE</key>
+			<string>ObjC</string>
+			<key>OUTLETS</key>
+			<dict>
+				<key>owner</key>
+				<string>id</string>
+			</dict>
+			<key>SUPERCLASS</key>
+			<string>NSWindow</string>
+		</dict>
+	</array>
+	<key>IBVersion</key>
+	<string>1</string>
+</dict>
+</plist>

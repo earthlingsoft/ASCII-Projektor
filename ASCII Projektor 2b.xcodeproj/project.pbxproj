@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6C0485920C81ADC200509B4D /* ASCIIMoviePlayer in Resources */ = {isa = PBXBuildFile; fileRef = 6C0485910C81ADC200509B4D /* ASCIIMoviePlayer */; };
-		6C0485D10C81B04200509B4D /* RetroController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6C0485CF0C81B04200509B4D /* RetroController.h */; };
 		6C0485D20C81B04200509B4D /* RetroController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0485D00C81B04200509B4D /* RetroController.m */; };
 		6C0486F20C81F90A00509B4D /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C0486F10C81F90A00509B4D /* QTKit.framework */; };
 		6C0488C60C8242AC00509B4D /* ASCII-Projektor-File-Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 6C0488C50C8242AC00509B4D /* ASCII-Projektor-File-Icon.icns */; };
@@ -21,14 +20,14 @@
 		6C159B4C0C78AAA400635B8F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C159B4A0C78AAA400635B8F /* AppDelegate.m */; };
 		6C159B550C78AC8F00635B8F /* Readme.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 6C159B530C78AC8F00635B8F /* Readme.rtf */; };
 		6C159B5C0C78AE3200635B8F /* Version History.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 6C159B5A0C78AE3200635B8F /* Version History.rtf */; };
+		6C5201D70C9AFFE000080F87 /* ESFullScreenWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C5201D60C9AFFE000080F87 /* ESFullScreenWindow.m */; };
+		6C9FA45F0CC8C926000E2F7B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1660FE840EACC02AAC07 /* InfoPlist.strings */; };
 		6CA7F7220C7CC6360021D876 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CA7F7210C7CC6360021D876 /* QTKit.framework */; };
 		6CA7F8BF0C7CD8D50021D876 /* esDroppable.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CA7F8BD0C7CD8D50021D876 /* esDroppable.m */; };
-		6CF7CFDE0C837F4E00B926E9 /* MyDocumentController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6CF7CFDD0C837F4E00B926E9 /* MyDocumentController.h */; };
 		6CFD4A450C7E38EF00B1469F /* MyDocumentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFD4A440C7E38EF00B1469F /* MyDocumentController.m */; };
 		8D15AC2C0486D014006FF6A4 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */; };
 		8D15AC2D0486D014006FF6A4 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B6FDCFA73011CA2CEA /* MainMenu.nib */; };
 		8D15AC2E0486D014006FF6A4 /* MyDocument.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B4FDCFA73011CA2CEA /* MyDocument.nib */; };
-		8D15AC2F0486D014006FF6A4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165FFE840EACC02AAC07 /* InfoPlist.strings */; };
 		8D15AC310486D014006FF6A4 /* MyDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4ACFDCFA73011CA2CEA /* MyDocument.m */; settings = {ATTRIBUTES = (); }; };
 		8D15AC320486D014006FF6A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4B0FDCFA73011CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */; };
@@ -42,15 +41,13 @@
 			dstSubfolderSpec = 10;
 			files = (
 				6C159B050C78A21E00635B8F /* Sparkle.framework in CopyFiles */,
-				6C0485D10C81B04200509B4D /* RetroController.h in CopyFiles */,
-				6CF7CFDE0C837F4E00B926E9 /* MyDocumentController.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		089C1660FE840EACC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		089C1660FE840EACC02AAC07 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		13E42FBA07B3F13500E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 		2A37F4ACFDCFA73011CA2CEA /* MyDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDocument.m; sourceTree = "<group>"; };
@@ -77,18 +74,16 @@
 		6C159B4A0C78AAA400635B8F /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6C159B540C78AC8F00635B8F /* English */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = English; path = English.lproj/Readme.rtf; sourceTree = "<group>"; };
 		6C159B5B0C78AE3200635B8F /* English */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = English; path = "English.lproj/Version History.rtf"; sourceTree = "<group>"; };
+		6C5201D50C9AFFE000080F87 /* ESFullScreenWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESFullScreenWindow.h; sourceTree = "<group>"; };
+		6C5201D60C9AFFE000080F87 /* ESFullScreenWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESFullScreenWindow.m; sourceTree = "<group>"; };
 		6CA7F7210C7CC6360021D876 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
 		6CA7F8BC0C7CD8D50021D876 /* esDroppable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = esDroppable.h; sourceTree = "<group>"; };
 		6CA7F8BD0C7CD8D50021D876 /* esDroppable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = esDroppable.m; sourceTree = "<group>"; };
-		6CF7CF100C83125400B926E9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		6CF7CF110C83126300B926E9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = fr; path = fr.lproj/MyDocument.nib; sourceTree = "<group>"; };
 		6CF7CF160C83131300B926E9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = fr; path = fr.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		6CF7CF170C83131800B926E9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = fr; path = fr.lproj/Credits.rtf; sourceTree = "<group>"; };
 		6CF7CF180C83131F00B926E9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = fr; path = fr.lproj/Readme.rtf; sourceTree = "<group>"; };
 		6CF7CF190C83132500B926E9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = fr; path = "fr.lproj/Version History.rtf"; sourceTree = "<group>"; };
 		6CF7CF1E0C8313E300B926E9 /* de */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = de; path = de.lproj/MainMenu.nib; sourceTree = "<group>"; };
-		6CF7CF1F0C8313F300B926E9 /* de */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = de; path = de.lproj/MyDocument.nib; sourceTree = "<group>"; };
-		6CF7CF200C8313FB00B926E9 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6CF7CF210C83140000B926E9 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = de; path = de.lproj/Credits.rtf; sourceTree = "<group>"; };
 		6CF7CF220C83140400B926E9 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = de; path = de.lproj/Readme.rtf; sourceTree = "<group>"; };
 		6CF7CF230C83140700B926E9 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = de; path = "de.lproj/Version History.rtf"; sourceTree = "<group>"; };
@@ -96,7 +91,7 @@
 		6CFD4A430C7E38EF00B1469F /* MyDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDocument.h; sourceTree = "<group>"; };
 		6CFD4A440C7E38EF00B1469F /* MyDocumentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDocumentController.m; sourceTree = "<group>"; };
 		8D15AC360486D014006FF6A4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		8D15AC370486D014006FF6A4 /* ASCII Projektor 2b.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ASCII Projektor 2b.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D15AC370486D014006FF6A4 /* ASCII Projektor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ASCII Projektor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,7 +135,7 @@
 		19C28FB0FE9D524F11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8D15AC370486D014006FF6A4 /* ASCII Projektor 2b.app */,
+				8D15AC370486D014006FF6A4 /* ASCII Projektor.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -173,6 +168,8 @@
 				6CA7F8BD0C7CD8D50021D876 /* esDroppable.m */,
 				6C0485CF0C81B04200509B4D /* RetroController.h */,
 				6C0485D00C81B04200509B4D /* RetroController.m */,
+				6C5201D50C9AFFE000080F87 /* ESFullScreenWindow.h */,
+				6C5201D60C9AFFE000080F87 /* ESFullScreenWindow.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -198,7 +195,7 @@
 				2A37F4B6FDCFA73011CA2CEA /* MainMenu.nib */,
 				2A37F4B4FDCFA73011CA2CEA /* MyDocument.nib */,
 				8D15AC360486D014006FF6A4 /* Info.plist */,
-				089C165FFE840EACC02AAC07 /* InfoPlist.strings */,
+				089C1660FE840EACC02AAC07 /* InfoPlist.strings */,
 				6C15994E0C7888AD00635B8F /* Localizable.strings */,
 			);
 			name = Resources;
@@ -232,7 +229,7 @@
 			name = "ASCII Projektor";
 			productInstallPath = "$(HOME)/Applications";
 			productName = "ASCII Projektor 2b";
-			productReference = 8D15AC370486D014006FF6A4 /* ASCII Projektor 2b.app */;
+			productReference = 8D15AC370486D014006FF6A4 /* ASCII Projektor.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -267,7 +264,7 @@
 				8D15AC2C0486D014006FF6A4 /* Credits.rtf in Resources */,
 				8D15AC2D0486D014006FF6A4 /* MainMenu.nib in Resources */,
 				8D15AC2E0486D014006FF6A4 /* MyDocument.nib in Resources */,
-				8D15AC2F0486D014006FF6A4 /* InfoPlist.strings in Resources */,
+				6C9FA45F0CC8C926000E2F7B /* InfoPlist.strings in Resources */,
 				6C15996F0C7889FE00635B8F /* Localizable.strings in Resources */,
 				6C159AC40C78A06600635B8F /* ASCII Projektor.icns in Resources */,
 				6C159B550C78AC8F00635B8F /* Readme.rtf in Resources */,
@@ -291,28 +288,17 @@
 				6CA7F8BF0C7CD8D50021D876 /* esDroppable.m in Sources */,
 				6CFD4A450C7E38EF00B1469F /* MyDocumentController.m in Sources */,
 				6C0485D20C81B04200509B4D /* RetroController.m in Sources */,
+				6C5201D70C9AFFE000080F87 /* ESFullScreenWindow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		089C165FFE840EACC02AAC07 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				089C1660FE840EACC02AAC07 /* English */,
-				6CF7CF100C83125400B926E9 /* fr */,
-				6CF7CF200C8313FB00B926E9 /* de */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 		2A37F4B4FDCFA73011CA2CEA /* MyDocument.nib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				2A37F4B5FDCFA73011CA2CEA /* English */,
-				6CF7CF110C83126300B926E9 /* fr */,
-				6CF7CF1F0C8313F300B926E9 /* de */,
 			);
 			name = MyDocument.nib;
 			sourceTree = "<group>";
@@ -377,7 +363,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
-				PRODUCT_NAME = "ASCII Projektor 2b";
+				PRODUCT_NAME = "ASCII Projektor";
 				WRAPPER_EXTENSION = app;
 				ZERO_LINK = YES;
 			};
@@ -401,7 +387,7 @@
 				GCC_MODEL_TUNING = G5;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
-				PRODUCT_NAME = "ASCII Projektor 2b";
+				PRODUCT_NAME = "ASCII Projektor";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -55,8 +55,6 @@
 - (void) updateScaleForSize:(NSSize) size;
 - (void) startFullScreen;
 - (void) stopFullScreen;
-- (IBAction) fullScreenStart: (id) sender;
-- (IBAction) fullScreenStop: (id) sender;
 
 	/* delegate methods */
 - (BOOL)control:(NSControl *)control isValidObject:(id)object;

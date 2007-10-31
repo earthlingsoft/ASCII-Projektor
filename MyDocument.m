@@ -49,12 +49,26 @@
     return @"MyDocument";
 }
 
-- (void)windowControllerDidLoadNib:(NSWindowController *) aController
+/*
+ - (void)windowControllerDidLoadNib:(NSWindowController *) aController
 {
     [super windowControllerDidLoadNib:aController];
     // Add any code here that needs to be executed once the windowController has loaded the document's window.
 }
+*/ 
 
+-(void) awakeFromNib {
+	// observe value changes
+	NSEnumerator * myEnumerator = [DATAKEYS objectEnumerator];
+	NSString * s;
+	while ( s = [myEnumerator nextObject] ) {
+		[self addObserver:self forKeyPath:s options:(NSKeyValueObservingOptionNew) context:nil];
+		[self setPatchValueFromPreference:s];	
+	}
+	
+	// register for drag and drop
+	[filmPathComboBox registerForDraggedTypes:[NSArray arrayWithObjects: NSFilenamesPboardType ,nil]];
+}
 
 
 #pragma mark READ AND WRITE
@@ -118,18 +132,8 @@
 	return NO;
 }
 
--(void) awakeFromNib {
-	// observe value changes
-	NSEnumerator * myEnumerator = [DATAKEYS objectEnumerator];
-	NSString * s;
-	while ( s = [myEnumerator nextObject] ) {
-		[self addObserver:self forKeyPath:s options:(NSKeyValueObservingOptionNew) context:nil];
-		[self setPatchValueFromPreference:s];	
-	}
-	
-	// register for drag and drop
-	[filmPathComboBox registerForDraggedTypes:[NSArray arrayWithObjects: NSFilenamesPboardType ,nil]];
-}
+
+#pragma mark VARIABLES
 
 - (void) observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
 	[self setPatchValueFromPreference:keyPath];
@@ -171,16 +175,60 @@
 }
 
 
+
+
+- (void) updateDefaultsForKey:(NSString*) valueKey withDefaultsArrayKey:(NSString *) defaultsKey defaultArray: (NSArray*) defaultArray {
+	NSString * newValue = [self valueForKey:valueKey];
+	if (![defaultArray containsObject: newValue]) {
+		NSArray * a = [[NSUserDefaults standardUserDefaults] objectForKey:defaultsKey];
+		if (a) {
+			NSMutableArray * b = [[a mutableCopy] autorelease];
+			[b removeObject:newValue];
+			[b insertObject:newValue atIndex:0];
+			if ([b count] > 10) {
+				[b removeLastObject];
+			}
+			a = b;
+		}
+		else {
+			a = [NSArray arrayWithObject:newValue];
+		}
+		[[NSUserDefaults standardUserDefaults] setObject:a forKey:defaultsKey];
+	}	
+}
+
+
+- (void) setPatchValueFromPreference:(NSString*) preferenceKey {
+	id myObject = [self valueForKey:preferenceKey];
+	// Un-archive colours
+	if ([myObject isKindOfClass: [NSData class]]) {
+		myObject = [NSUnarchiver unarchiveObjectWithData: myObject];
+	}
+	[myPatchController setValue:myObject forInputKey:preferenceKey];	
+}
+
+
+
+
+
+
+#pragma mark DELEGATE Methods
+
 - (BOOL)windowShouldZoom:(NSWindow *)sender toFrame:(NSRect)newFrame
 {
 	[self startFullScreen];
 	return NO;
 }
 
-
--(IBAction) fullScreenStart:(id) sender {
-	[self startFullScreen];
+- (BOOL)control:(NSControl *)control isValidObject:(id)object {
+	return YES;
 }
+
+
+
+
+
+#pragma mark FULLSCREEN
 
 - (void) startFullScreen  {
 	
@@ -237,10 +285,6 @@
 }	
 
 
-- (IBAction) fullScreenStop: (id) sender {
-	[self stopFullScreen];
-}
-
 - (void) stopFullScreen
 {
 	// NSLog(@"stopFullScreen");
@@ -258,44 +302,6 @@
 		// its window level to the same one as the shield window level,
 		// or the user won't see anything.
 	}
-}
-
-
-
-
-- (void) updateDefaultsForKey:(NSString*) valueKey withDefaultsArrayKey:(NSString *) defaultsKey defaultArray: (NSArray*) defaultArray {
-	NSString * newValue = [self valueForKey:valueKey];
-	if (![defaultArray containsObject: newValue]) {
-		NSArray * a = [[NSUserDefaults standardUserDefaults] objectForKey:defaultsKey];
-		if (a) {
-			NSMutableArray * b = [[a mutableCopy] autorelease];
-			[b removeObject:newValue];
-			[b insertObject:newValue atIndex:0];
-			if ([b count] > 10) {
-				[b removeLastObject];
-			}
-			a = b;
-		}
-		else {
-			a = [NSArray arrayWithObject:newValue];
-		}
-		[[NSUserDefaults standardUserDefaults] setObject:a forKey:defaultsKey];
-	}	
-}
-
-
-- (void) setPatchValueFromPreference:(NSString*) preferenceKey {
-	id myObject = [self valueForKey:preferenceKey];
-	// Un-archive colours
-	if ([myObject isKindOfClass: [NSData class]]) {
-		myObject = [NSUnarchiver unarchiveObjectWithData: myObject];
-	}
-	[myPatchController setValue:myObject forInputKey:preferenceKey];	
-}
-
-
-- (BOOL)control:(NSControl *)control isValidObject:(id)object {
-	return YES;
 }
 
 

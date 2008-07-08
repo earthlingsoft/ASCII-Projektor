@@ -42,6 +42,21 @@
     return self;
 }
 
+
+- (void) dealloc {
+	[filmPath dealloc];
+	[textureString dealloc];
+	[textureFont dealloc];
+	[backgroundColour dealloc];
+	[textColour dealloc];
+	[recordingPath dealloc];
+
+	[super dealloc];
+}
+
+
+
+
 - (NSString *)windowNibName
 {
     // Override returning the nib file name of the document
@@ -166,12 +181,14 @@
 
 
 - (void) updateScaleForSize:(NSSize) size {
-	float newMaximumScale = 2047.0 / MAX(size.width, size.height);
+/*
+ float newMaximumScale = 2047.0 / MAX(size.width, size.height);
 	NSNumber * newMaximumScaleNumber = [NSNumber numberWithFloat: newMaximumScale];
 	// [self setValue:newMaximumScaleNumber forKey:@"maximumScale"];
 	if (scale > newMaximumScale) {
 		// [self setValue:newMaximumScaleNumber forKey:@"scale"];
 	}			
+ */
 }
 
 

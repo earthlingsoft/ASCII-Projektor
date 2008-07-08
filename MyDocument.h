@@ -47,7 +47,6 @@
 	IBOutlet ESFullScreenWindow * mScreenWindow;
 	
 	NSRect o_saved_frame;
-
 }
 
 - (void) setPatchValueFromPreference:(NSString*) preferenceKey;

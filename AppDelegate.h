@@ -11,6 +11,7 @@
 
 @interface AppDelegate : NSObject {
 }
+
 - (IBAction) copyASCIIMoviePlayerPath:(id) sender;
 - (IBAction) showWebpage:(id)sender;
 - (IBAction) showWebsite:(id)sender;

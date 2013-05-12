@@ -43,16 +43,6 @@
 }
 
 
-- (void) dealloc {
-	[filmPath dealloc];
-	[textureString dealloc];
-	[textureFont dealloc];
-	[backgroundColour dealloc];
-	[textColour dealloc];
-	[recordingPath dealloc];
-
-	[super dealloc];
-}
 
 
 
@@ -199,7 +189,7 @@
 	if (![defaultArray containsObject: newValue]) {
 		NSArray * a = [[NSUserDefaults standardUserDefaults] objectForKey:defaultsKey];
 		if (a) {
-			NSMutableArray * b = [[a mutableCopy] autorelease];
+			NSMutableArray * b = [a mutableCopy];
 			[b removeObject:newValue];
 			[b insertObject:newValue atIndex:0];
 			if ([b count] > 10) {
@@ -231,95 +221,10 @@
 
 #pragma mark DELEGATE Methods
 
-- (BOOL)windowShouldZoom:(NSWindow *)sender toFrame:(NSRect)newFrame
-{
-	[self startFullScreen];
-	return NO;
-}
-
 - (BOOL)control:(NSControl *)control isValidObject:(id)object {
 	return YES;
 }
 
-
-
-
-
-#pragma mark FULLSCREEN
-
-- (void) startFullScreen  {
-	
-	// Get the screen information.
-    NSScreen* mainScreen = [NSScreen mainScreen];
-    NSDictionary* screenInfo = [mainScreen deviceDescription];
-    NSNumber* screenID = [screenInfo objectForKey:@"NSScreenNumber"];
-	
-    // Capture the screen.
-    CGDirectDisplayID displayID = (CGDirectDisplayID)[screenID longValue];
-    CGDisplayErr err =  CGDisplayCapture(displayID);
-    if (err == CGDisplayNoErr)
-    {
-        // Create the full-screen window if it doesn’t already  exist.
-        if (!mScreenWindow)
-        {
-            // Create the full-screen window.
-            NSRect winRect = [mainScreen frame];
-            mScreenWindow = [[ESFullScreenWindow alloc] initWithContentRect:winRect
-														styleMask:NSBorderlessWindowMask
-														  backing:NSBackingStoreBuffered
-															defer:NO
-														   screen:[NSScreen mainScreen]];
-			
-            // Establish the window attributes.
-            [mScreenWindow setReleasedWhenClosed:NO];
-            [mScreenWindow setDisplaysWhenScreenProfileChanges:YES];
-        }
-        [mScreenWindow setDelegate:self];
-		[mScreenWindow setValue:self forKey:@"owner"];
-			
-        [mScreenWindow setContentView:myPatchController];
-		 [myPatchController setEventForwardingMask:0];
-        [myPatchController setNeedsDisplay:YES];
-		
-        // Make the screen window the current document window.
-		[displayWindow retain]; // make sure we don't lose the window when it's not held by the WindowController
-        NSWindowController* winController = [[self windowControllers] objectAtIndex:0];
-        [winController setWindow:mScreenWindow];
-		
-        // The window has to be above the level of the shield window.
-        int32_t     shieldLevel = CGShieldingWindowLevel();
-        [mScreenWindow setLevel:shieldLevel];
-		
-        // Show the window.
-        [mScreenWindow makeKeyAndOrderFront:nil];
-		[mScreenWindow makeFirstResponder:mScreenWindow];
-		[NSCursor hide];
-		// NSLog (@"%i", [mScreenWindow ignoresMouseEvents]);
-		// NSLog(@"%i", [mScreenWindow isKeyWindow]);
-		// NSLog([[mScreenWindow firstResponder] description]);
-		// NSLog(@"%i", [myPatchController eventForwardingMask]);	
-	}
-}	
-
-
-- (void) stopFullScreen
-{
-	// NSLog(@"stopFullScreen");
-	[mScreenWindow orderOut:self];
-	NSWindowController* winController = [[self windowControllers] objectAtIndex:0];
-	[winController setWindow:displayWindow];
-	[displayWindow setContentView:myPatchController];
-	[NSCursor unhide];
-	[displayWindow release]; // undo our extra retain on the window now that it's held by the WindowController again
-	
-	// Release the display(s)
-	if (CGDisplayRelease( kCGDirectMainDisplay ) != kCGErrorSuccess) {
-		NSLog( @"Couldn't release the display(s)!" );
-		// Note: if you display an error dialog here, make sure you set
-		// its window level to the same one as the shield window level,
-		// or the user won't see anything.
-	}
-}
 
 
 @end

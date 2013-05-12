@@ -103,7 +103,7 @@
             if (values != NULL) {
                 CFTypeRef theUTI = CFDictionaryGetValue(values, kLSItemContentType);
                 if (theUTI != NULL) {
-					if (UTTypeConformsTo(theUTI, (CFStringRef)UTI)) {
+					if (UTTypeConformsTo(theUTI, (__bridge CFStringRef)UTI)) {
 						doesConform = YES;
 					}
 				}

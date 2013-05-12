@@ -40,11 +40,7 @@
 }
 
 - (BOOL)performDragOperation:(id <NSDraggingInfo>)sender {
-    NSPasteboard *pboard;
-    NSDragOperation sourceDragMask;
-	
-    sourceDragMask = [sender draggingSourceOperationMask];
-    pboard = [sender draggingPasteboard];
+    NSPasteboard * pboard = [sender draggingPasteboard];
 	
 	if ( [[pboard types] containsObject:NSFilenamesPboardType] ) {
         NSArray *files = [pboard propertyListForType:NSFilenamesPboardType];
@@ -65,7 +61,7 @@
 	
 	NSData * d = [[NSUserDefaultsController sharedUserDefaultsController] valueForKeyPath:@"values.retroBackgroundColour"];
 	NSColor * c = [[NSUnarchiver unarchiveObjectWithData:d] colorUsingColorSpaceName:NSCalibratedRGBColorSpace];
-	float r,g,b,a;
+	CGFloat r,g,b,a;
 	[c getRed:&r green:&g blue:&b alpha:&a];
 	unsigned short rs, gs, bs, as;
 	rs = r * 65535;
@@ -84,9 +80,9 @@
 		
 	NSString * rawScript = [NSString stringWithFormat:@"\n tell application \"Terminal\"\n set theCommand to \"%@\"\n   activate\n	do script with command theCommand\n  tell window 1\n	set frontmost to true\n  set custom title to \".-:* ASCII Projektor *:-. \"\n  set position to {30, 30}\n  set number of columns to %i\n  set (number of rows) to %i\n  set background color to %@\n  set normal text color to %@\n  end tell\n  end tell", theCommand, width, height, backgroundColourString, foregroundColourString];
 	
-	NSLog (rawScript);
+	// NSLog (rawScript);
 	
-	NSAppleScript * theScript = [[[NSAppleScript alloc] initWithSource:rawScript] autorelease];
+	NSAppleScript * theScript = [[NSAppleScript alloc] initWithSource:rawScript];
 	NSDictionary * theError;
 	[theScript executeAndReturnError:&theError];
 }

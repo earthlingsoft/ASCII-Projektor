@@ -11,7 +11,6 @@
 #import <QuartzComposer/QCView.h>
 #import <QTKit/QTMovie.h>
 #import "ComboBoxDataSources.h"
-#import "ESFullScreenWindow.h"
 
 #define ASCIIPROJEKTORFILETYPE @"ASCII Projektion"
 #define FILMFILETYPE @"Film"
@@ -19,7 +18,7 @@
 #define DATAKEYS [NSArray arrayWithObjects:@"textureString", @"invertTexture", @"textureFont", @"backgroundColour", @"textColour", @"scale",  @"filmPath", @"fontSize", @"filmSource", @"reflect", @"backgroundEffect", @"backgroundContrast", @"backgroundSaturation", @"backgroundType", @"backgroundBlur", @"gamma", @"rotateTexture",  nil]
 
 
-@interface MyDocument : NSDocument
+@interface MyDocument : NSDocument <NSWindowDelegate>
 {
 	int filmSource;
 	NSString * filmPath;
@@ -43,19 +42,11 @@
 	
 	IBOutlet QCView * myPatchController; // unfortunate name!!
 	IBOutlet NSComboBox * filmPathComboBox;
-	IBOutlet NSWindow * displayWindow;
-	IBOutlet ESFullScreenWindow * mScreenWindow;
-	
-	NSRect o_saved_frame;
 }
 
 - (void) setPatchValueFromPreference:(NSString*) preferenceKey;
 - (void) updateDefaultsForKey:(NSString*) valueKey withDefaultsArrayKey:(NSString *) defaultsKey defaultArray: (NSArray*) defaultArray;
 - (void) updateScaleForSize:(NSSize) size;
-- (void) startFullScreen;
-- (void) stopFullScreen;
 
-	/* delegate methods */
-- (BOOL)control:(NSControl *)control isValidObject:(id)object;
 
 @end

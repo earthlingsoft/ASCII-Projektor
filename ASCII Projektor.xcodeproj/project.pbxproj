@@ -3,13 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 42;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		6C0485920C81ADC200509B4D /* ASCIIMoviePlayer in Resources */ = {isa = PBXBuildFile; fileRef = 6C0485910C81ADC200509B4D /* ASCIIMoviePlayer */; };
 		6C0485D20C81B04200509B4D /* RetroController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0485D00C81B04200509B4D /* RetroController.m */; };
-		6C0486F20C81F90A00509B4D /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C0486F10C81F90A00509B4D /* QTKit.framework */; };
 		6C0488C60C8242AC00509B4D /* ASCII-Projektor-File-Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 6C0488C50C8242AC00509B4D /* ASCII-Projektor-File-Icon.icns */; };
 		6C1597BC0C785E6900635B8F /* QuartzComposer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C1597BB0C785E6900635B8F /* QuartzComposer.framework */; };
 		6C1597CC0C78647800635B8F /* ComboBoxDataSources.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C1597CB0C78647800635B8F /* ComboBoxDataSources.m */; };
@@ -53,13 +52,13 @@
 		2A37F4ACFDCFA73011CA2CEA /* MyDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDocument.m; sourceTree = "<group>"; };
 		2A37F4AEFDCFA73011CA2CEA /* MyDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDocument.h; sourceTree = "<group>"; };
 		2A37F4B0FDCFA73011CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		2A37F4B5FDCFA73011CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MyDocument.nib; sourceTree = "<group>"; };
-		2A37F4B7FDCFA73011CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		2A37F4B5FDCFA73011CA2CEA /* MyDocument.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MyDocument.xib; path = English.lproj/MyDocument.xib; sourceTree = "<group>"; };
+		2A37F4B7FDCFA73011CA2CEA /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainMenu.xib; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		2A37F4BAFDCFA73011CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = English; path = English.lproj/Credits.rtf; sourceTree = "<group>"; };
 		2A37F4C4FDCFA73011CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32DBCF750370BD2300C91783 /* ASCII Projektor 2b_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ASCII Projektor 2b_Prefix.pch"; sourceTree = "<group>"; };
-		6C0485910C81ADC200509B4D /* ASCIIMoviePlayer */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = ASCIIMoviePlayer; path = ../../../Shared/builds/Deployment/ASCIIMoviePlayer; sourceTree = SOURCE_ROOT; };
+		6C0485910C81ADC200509B4D /* ASCIIMoviePlayer */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = ASCIIMoviePlayer; path = "../../../../Users/ssp/Developer/ASCII Projektor 1/ASCIIMoviePlayerSample+ES/ASCIIMoviePlayer"; sourceTree = DEVELOPER_DIR; };
 		6C0485CF0C81B04200509B4D /* RetroController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RetroController.h; sourceTree = "<group>"; };
 		6C0485D00C81B04200509B4D /* RetroController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RetroController.m; sourceTree = "<group>"; };
 		6C0486F10C81F90A00509B4D /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
@@ -79,11 +78,11 @@
 		6CA7F7210C7CC6360021D876 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
 		6CA7F8BC0C7CD8D50021D876 /* esDroppable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = esDroppable.h; sourceTree = "<group>"; };
 		6CA7F8BD0C7CD8D50021D876 /* esDroppable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = esDroppable.m; sourceTree = "<group>"; };
-		6CF7CF160C83131300B926E9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = fr; path = fr.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		6CF7CF160C83131300B926E9 /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainMenu.xib; path = fr.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		6CF7CF170C83131800B926E9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = fr; path = fr.lproj/Credits.rtf; sourceTree = "<group>"; };
 		6CF7CF180C83131F00B926E9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = fr; path = fr.lproj/Readme.rtf; sourceTree = "<group>"; };
 		6CF7CF190C83132500B926E9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = fr; path = "fr.lproj/Version History.rtf"; sourceTree = "<group>"; };
-		6CF7CF1E0C8313E300B926E9 /* de */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = de; path = de.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		6CF7CF1E0C8313E300B926E9 /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainMenu.xib; path = de.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		6CF7CF210C83140000B926E9 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = de; path = de.lproj/Credits.rtf; sourceTree = "<group>"; };
 		6CF7CF220C83140400B926E9 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = de; path = de.lproj/Readme.rtf; sourceTree = "<group>"; };
 		6CF7CF230C83140700B926E9 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = de; path = "de.lproj/Version History.rtf"; sourceTree = "<group>"; };
@@ -103,7 +102,6 @@
 				6C1597BC0C785E6900635B8F /* QuartzComposer.framework in Frameworks */,
 				6C159AED0C78A1ED00635B8F /* Sparkle.framework in Frameworks */,
 				6CA7F7220C7CC6360021D876 /* QTKit.framework in Frameworks */,
-				6C0486F20C81F90A00509B4D /* QTKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,7 +235,12 @@
 /* Begin PBXProject section */
 		2A37F4A9FDCFA73011CA2CEA /* Project object */ = {
 			isa = PBXProject;
-			buildConfigurationList = C05733CB08A9546B00998B17 /* Build configuration list for PBXProject "ASCII Projektor 2b" */;
+			attributes = {
+				LastUpgradeCheck = 0460;
+			};
+			buildConfigurationList = C05733CB08A9546B00998B17 /* Build configuration list for PBXProject "ASCII Projektor" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				English,
@@ -298,7 +301,7 @@
 		2A37F4B4FDCFA73011CA2CEA /* MyDocument.nib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				2A37F4B5FDCFA73011CA2CEA /* English */,
+				2A37F4B5FDCFA73011CA2CEA /* MyDocument.xib */,
 			);
 			name = MyDocument.nib;
 			sourceTree = "<group>";
@@ -306,9 +309,9 @@
 		2A37F4B6FDCFA73011CA2CEA /* MainMenu.nib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				2A37F4B7FDCFA73011CA2CEA /* English */,
-				6CF7CF160C83131300B926E9 /* fr */,
-				6CF7CF1E0C8313E300B926E9 /* de */,
+				2A37F4B7FDCFA73011CA2CEA /* MainMenu.xib */,
+				6CF7CF1E0C8313E300B926E9 /* MainMenu.xib */,
+				6CF7CF160C83131300B926E9 /* MainMenu.xib */,
 			);
 			name = MainMenu.nib;
 			sourceTree = "<group>";
@@ -358,7 +361,6 @@
 				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SYSTEM_LIBRARY_DIR)/Frameworks/Quartz.framework/Versions/A/Frameworks\"";
 				FRAMEWORK_SEARCH_PATHS_QUOTED_2 = "\"$(SRCROOT)\"";
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = Info.plist;
@@ -395,20 +397,23 @@
 		C05733CC08A9546B00998B17 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "earthlingsoft Software";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				PREBINDING = NO;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = macosx10.7;
 			};
 			name = Debug;
 		};
 		C05733CD08A9546B00998B17 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CODE_SIGN_IDENTITY = "earthlingsoft Software";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				PREBINDING = NO;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = macosx10.7;
 			};
 			name = Release;
 		};
@@ -424,7 +429,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C05733CB08A9546B00998B17 /* Build configuration list for PBXProject "ASCII Projektor 2b" */ = {
+		C05733CB08A9546B00998B17 /* Build configuration list for PBXProject "ASCII Projektor" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C05733CC08A9546B00998B17 /* Debug */,

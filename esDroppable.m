@@ -29,11 +29,7 @@
 }
 
 - (BOOL)performDragOperation:(id <NSDraggingInfo>)sender {
-    NSPasteboard *pboard;
-    NSDragOperation sourceDragMask;
-	
-    sourceDragMask = [sender draggingSourceOperationMask];
-    pboard = [sender draggingPasteboard];
+    NSPasteboard * pboard = [sender draggingPasteboard];
 	
 	if ( [[pboard types] containsObject:NSFilenamesPboardType] ) {
         NSArray *files = [pboard propertyListForType:NSFilenamesPboardType];
@@ -76,7 +72,7 @@
 	
 	NSString * filePath = [array objectAtIndex:0];
 	
-	[[self delegate] setValue:filePath forKey:@"filmPath"];
+	[(NSObject*)[self delegate] setValue:filePath forKey:@"filmPath"];
 	
 	return YES;
 }

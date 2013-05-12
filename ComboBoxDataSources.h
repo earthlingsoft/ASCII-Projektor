@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 
 
-#define DEFAULTFILMPATHS [NSArray arrayWithObjects: @"/System/Library/CoreServices/Setup Assistant.app/Contents/Resources/TransitionSection.bundle/Contents/Resources/intro.mov", nil]
+#define DEFAULTFILMPATHS [NSArray arrayWithObjects: @"/System/Library/Compositions/Rollercoaster.mov", nil]
 #define PATHARRAYKEY @"filmPaths"
 @interface FilmPathComboBoxDataSource : NSObject {
 }

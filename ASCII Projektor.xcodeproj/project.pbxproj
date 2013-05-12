@@ -113,6 +113,7 @@
 		6CC9EE69173FF0BF00B80EC4 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		6CC9EE6C173FF12500B80EC4 /* MyDocument.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyDocument.xib; sourceTree = "<group>"; };
 		6CC9EE6E173FF3F700B80EC4 /* Sparkle.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Sparkle.xcodeproj; path = sparkle/Sparkle.xcodeproj; sourceTree = "<group>"; };
+		6CC9EE891740095F00B80EC4 /* To Do */ = {isa = PBXFileReference; lastKnownFileType = text; path = "To Do"; sourceTree = "<group>"; };
 		6CF7CF170C83131800B926E9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = fr; path = fr.lproj/Credits.rtf; sourceTree = "<group>"; };
 		6CF7CF180C83131F00B926E9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = fr; path = fr.lproj/Readme.rtf; sourceTree = "<group>"; };
 		6CF7CF190C83132500B926E9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = fr; path = "fr.lproj/Version History.rtf"; sourceTree = "<group>"; };
@@ -153,6 +154,7 @@
 		2A37F4AAFDCFA73011CA2CEA /* ASCII Projektor 2b */ = {
 			isa = PBXGroup;
 			children = (
+				6CC9EE891740095F00B80EC4 /* To Do */,
 				6CC9EE6E173FF3F700B80EC4 /* Sparkle.xcodeproj */,
 				2A37F4ABFDCFA73011CA2CEA /* Classes */,
 				2A37F4AFFDCFA73011CA2CEA /* Other Sources */,

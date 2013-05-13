@@ -16,12 +16,12 @@
 		6C159B4C0C78AAA400635B8F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C159B4A0C78AAA400635B8F /* AppDelegate.m */; };
 		6C159B550C78AC8F00635B8F /* Readme.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 6C159B530C78AC8F00635B8F /* Readme.rtf */; };
 		6C159B5C0C78AE3200635B8F /* Version History.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 6C159B5A0C78AE3200635B8F /* Version History.rtf */; };
+		6C95D0761741922E00F94FFD /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C95D0751741922E00F94FFD /* Sparkle.framework */; };
 		6C9FA45F0CC8C926000E2F7B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1660FE840EACC02AAC07 /* InfoPlist.strings */; };
 		6CA7F8BF0C7CD8D50021D876 /* esDroppable.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CA7F8BD0C7CD8D50021D876 /* esDroppable.m */; };
 		6CC9EE67173FF0B700B80EC4 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CC9EE65173FF0B700B80EC4 /* MainMenu.xib */; };
 		6CC9EE6D173FF12500B80EC4 /* MyDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CC9EE6C173FF12500B80EC4 /* MyDocument.xib */; };
 		6CC9EE81173FF45400B80EC4 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6CC9EE77173FF3F700B80EC4 /* Sparkle.framework */; };
-		6CC9EE82173FF47B00B80EC4 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CC9EE77173FF3F700B80EC4 /* Sparkle.framework */; };
 		6CC9EE85173FF50D00B80EC4 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13E42FBA07B3F13500E4EEF1 /* CoreData.framework */; };
 		6CC9EE86173FF50F00B80EC4 /* QuartzComposer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C1597BB0C785E6900635B8F /* QuartzComposer.framework */; };
 		6CC9EE87173FF51200B80EC4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */; };
@@ -103,6 +103,7 @@
 		6C159AC30C78A06600635B8F /* ASCII Projektor.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "ASCII Projektor.icns"; sourceTree = "<group>"; };
 		6C159B490C78AAA400635B8F /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6C159B4A0C78AAA400635B8F /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6C95D0751741922E00F94FFD /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = "../../../../Library/Developer/Xcode/DerivedData/ASCII_Projektor-fpsbufjhqchijtfybujndfddrcqi/Build/Products/Release/Sparkle.framework"; sourceTree = "<group>"; };
 		6CA7F8BC0C7CD8D50021D876 /* esDroppable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = esDroppable.h; sourceTree = "<group>"; };
 		6CA7F8BD0C7CD8D50021D876 /* esDroppable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = esDroppable.m; sourceTree = "<group>"; };
 		6CC9EE62173FF03C00B80EC4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = "en.lproj/Version History.rtf"; sourceTree = "<group>"; };
@@ -132,11 +133,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6CC9EE82173FF47B00B80EC4 /* Sparkle.framework in Frameworks */,
 				6CC9EE85173FF50D00B80EC4 /* CoreData.framework in Frameworks */,
 				6CC9EE87173FF51200B80EC4 /* Cocoa.framework in Frameworks */,
 				6CC9EE88173FF51600B80EC4 /* QTKit.framework in Frameworks */,
 				6CC9EE86173FF50F00B80EC4 /* QuartzComposer.framework in Frameworks */,
+				6C95D0761741922E00F94FFD /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,6 +216,7 @@
 		2A37F4C3FDCFA73011CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6C95D0751741922E00F94FFD /* Sparkle.framework */,
 				13E42FBA07B3F13500E4EEF1 /* CoreData.framework */,
 				6C1597BB0C785E6900635B8F /* QuartzComposer.framework */,
 				6C0486F10C81F90A00509B4D /* QTKit.framework */,
@@ -242,10 +244,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C05733C708A9546B00998B17 /* Build configuration list for PBXNativeTarget "ASCII Projektor" */;
 			buildPhases = (
-				8D15AC2B0486D014006FF6A4 /* Resources */,
 				8D15AC300486D014006FF6A4 /* Sources */,
-				8D15AC330486D014006FF6A4 /* Frameworks */,
+				8D15AC2B0486D014006FF6A4 /* Resources */,
 				6C159B010C78A21300635B8F /* CopyFiles */,
+				8D15AC330486D014006FF6A4 /* Frameworks */,
+				6C95D0741741913400F94FFD /* Run Script: Remove headers and superfluous Localisations */,
 			);
 			buildRules = (
 			);
@@ -350,6 +353,23 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6C95D0741741913400F94FFD /* Run Script: Remove headers and superfluous Localisations */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script: Remove headers and superfluous Localisations";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd \"$BUILT_PRODUCTS_DIR\"\ncd \"ASCII Projektor.app/Contents/\"\n\n# Sparkle cleanup\n# kill headers\ncd \"Frameworks/Sparkle.framework/\"\nls | grep Headers | xargs rm\ncd \"Versions/A\"\nls | grep Headers | xargs rm -r\n\n# kill unused localisations\ncd \"Resources\"\nfind . -name '*.lproj' | grep -v -E '(de|en|fr).lproj' | xargs rm -r\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8D15AC300486D014006FF6A4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -414,50 +434,32 @@
 		C05733C808A9546B00998B17 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_ARC = YES;
-				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_2)",
 					"\"$(SYSTEM_LIBRARY_DIR)/Frameworks/Quartz.framework/Versions/A/Frameworks\"",
+					"\"$(SRCROOT)/../../../../Library/Developer/Xcode/DerivedData/ASCII_Projektor-fpsbufjhqchijtfybujndfddrcqi/Build/Products/Release\"",
 				);
-				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SYSTEM_LIBRARY_DIR)/Frameworks/Quartz.framework/Versions/A/Frameworks\"";
-				FRAMEWORK_SEARCH_PATHS_QUOTED_2 = "\"$(SRCROOT)\"";
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Applications";
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "ASCII Projektor";
-				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
-				ZERO_LINK = YES;
 			};
 			name = Debug;
 		};
 		C05733C908A9546B00998B17 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_ARC = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_2)",
 					"\"$(SYSTEM_LIBRARY_DIR)/Frameworks/Quartz.framework/Versions/A/Frameworks\"",
+					"\"$(SRCROOT)/../../../../Library/Developer/Xcode/DerivedData/ASCII_Projektor-fpsbufjhqchijtfybujndfddrcqi/Build/Products/Release\"",
 				);
-				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SYSTEM_LIBRARY_DIR)/Frameworks/Quartz.framework/Versions/A/Frameworks\"";
-				FRAMEWORK_SEARCH_PATHS_QUOTED_2 = "\"$(SRCROOT)\"";
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_MODEL_TUNING = G5;
 				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Applications";
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "ASCII Projektor";
-				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -465,6 +467,8 @@
 		C05733CC08A9546B00998B17 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "earthlingsoft Software";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -476,7 +480,8 @@
 		C05733CD08A9546B00998B17 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "earthlingsoft Software";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;

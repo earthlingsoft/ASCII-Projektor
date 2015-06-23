@@ -14,8 +14,7 @@
 
 #pragma mark SETUP
 
-- (id)init
-{
+- (id)init {
     self = [super init];
     if (self) {
 		// set defaults for our values...
@@ -37,32 +36,26 @@
 		[self setValue:[NSNumber numberWithInt: 4] forKey:@"backgroundEffect"];
 		[self setValue:[NSNumber numberWithFloat: 0.1] forKey: @"backgroundBlur"];
 		[self setValue:[NSNumber numberWithFloat:1.0] forKey: @"gamma"];
-		[self setValue:[NSNumber numberWithBool:NO] forKey: @"rotateTexture"];		
+		[self setValue:[NSNumber numberWithBool:NO] forKey: @"rotateTexture"];
     }
     return self;
 }
 
 
 
-
-
-
-- (NSString *)windowNibName
-{
+- (NSString *) windowNibName {
     // Override returning the nib file name of the document
     // If you need to use a subclass of NSWindowController or if your document supports multiple NSWindowControllers, you should remove this method and override -makeWindowControllers instead.
     return @"MyDocument";
 }
 
-/*
- - (void)windowControllerDidLoadNib:(NSWindowController *) aController
-{
-    [super windowControllerDidLoadNib:aController];
-    // Add any code here that needs to be executed once the windowController has loaded the document's window.
-}
-*/ 
 
--(void) awakeFromNib {
+
+- (void) awakeFromNib {
+	// set up QCView
+	BOOL loadResult = [qcView loadCompositionFromFile:[[NSBundle mainBundle] pathForResource:@"TileFilter" ofType:@"qtz"]];
+	[qcView startRendering];
+	
 	// observe value changes
 	NSEnumerator * myEnumerator = [DATAKEYS objectEnumerator];
 	NSString * s;
@@ -76,7 +69,8 @@
 }
 
 
-#pragma mark READ AND WRITE
+
+#pragma mark READ AND WRITE / transient documents
 
 - (BOOL)writeToURL:(NSURL *)absoluteURL ofType:(NSString *)typeName error:(NSError **)outError {
 	NSEnumerator * keyEnumerator = [DATAKEYS objectEnumerator];
@@ -95,8 +89,7 @@
 }
 
 
-- (NSDictionary *)fileAttributesToWriteToFile:(NSString *)fullDocumentPath ofType:(NSString *)documentTypeName saveOperation:(NSSaveOperationType)saveOperationType
-{
+- (NSDictionary *)fileAttributesToWriteToFile:(NSString *)fullDocumentPath ofType:(NSString *)documentTypeName saveOperation:(NSSaveOperationType)saveOperationType {
 	NSMutableDictionary *myDict= [NSMutableDictionary dictionaryWithDictionary:[super fileAttributesToWriteToFile:fullDocumentPath ofType:documentTypeName saveOperation:saveOperationType]];
 	
 	[myDict setObject:[NSNumber numberWithLong:'esAP'] forKey:NSFileHFSCreatorCode];
@@ -138,6 +131,34 @@
 }
 
 
+
+/*
+	A transient document is an untitled document that was opened automatically. If a real document is opened before the transient document is edited, the real document should replace the transient. If a transient document is edited, it ceases to be transient.
+*/
+- (BOOL)isTransient {
+    return transient;
+}
+
+
+- (void)setTransient:(BOOL)flag {
+    transient = flag;
+}
+
+
+
+/*
+	We can't replace transient document that have sheets on them.
+*/
+- (BOOL)isTransientAndCanBeReplaced {
+    if (![self isTransient]) return NO;
+    for (NSWindowController *controller in [self windowControllers]) if ([[controller window] attachedSheet]) return NO;
+    return YES;
+}
+
+
+
+
+
 #pragma mark VARIABLES
 
 - (void) observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
@@ -169,19 +190,9 @@
 	}
 }
 
-
-- (void) updateScaleForSize:(NSSize) size {
-/*
- float newMaximumScale = 2047.0 / MAX(size.width, size.height);
-	NSNumber * newMaximumScaleNumber = [NSNumber numberWithFloat: newMaximumScale];
-	// [self setValue:newMaximumScaleNumber forKey:@"maximumScale"];
-	if (scale > newMaximumScale) {
-		// [self setValue:newMaximumScaleNumber forKey:@"scale"];
-	}			
- */
+- (void) updateScaleForSize:(NSSize)size {
+	
 }
-
-
 
 
 - (void) updateDefaultsForKey:(NSString*) valueKey withDefaultsArrayKey:(NSString *) defaultsKey defaultArray: (NSArray*) defaultArray {
@@ -205,17 +216,15 @@
 }
 
 
+
 - (void) setPatchValueFromPreference:(NSString*) preferenceKey {
 	id myObject = [self valueForKey:preferenceKey];
 	// Un-archive colours
 	if ([myObject isKindOfClass: [NSData class]]) {
 		myObject = [NSUnarchiver unarchiveObjectWithData: myObject];
 	}
-	[myPatchController setValue:myObject forInputKey:preferenceKey];	
+	[qcView setValue:myObject forInputKey:preferenceKey];
 }
-
-
-
 
 
 

@@ -40,13 +40,21 @@
 	float gamma;
 	BOOL rotateTexture;
 	
-	IBOutlet QCView * myPatchController; // unfortunate name!!
+	IBOutlet QCView * qcView;
 	IBOutlet NSComboBox * filmPathComboBox;
+
+    BOOL transient; // Untitled document automatically opened and never modified
 }
 
 - (void) setPatchValueFromPreference:(NSString*) preferenceKey;
 - (void) updateDefaultsForKey:(NSString*) valueKey withDefaultsArrayKey:(NSString *) defaultsKey defaultArray: (NSArray*) defaultArray;
 - (void) updateScaleForSize:(NSSize) size;
+
+
+/* Transient documents */
+- (BOOL)isTransient;
+- (void)setTransient:(BOOL)flag;
+- (BOOL)isTransientAndCanBeReplaced;
 
 
 @end

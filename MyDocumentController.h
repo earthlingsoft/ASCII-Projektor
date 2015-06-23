@@ -1,20 +1,22 @@
 //
 //  MyDocumentController.h
-//  ASCII Projektor 2b
+//  ASCII Projektor
 //
-//  Created by  Sven on 23.08.07.
+//  Created by Sven on 23.08.07.
 //  Copyright 2007 earthlingsoft. All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>
-
+#import "MyDocument.h"
 
 @interface MyDocumentController : NSDocumentController {
-
+	NSLock *transientDocumentLock;
+	NSLock *displayDocumentLock;
 }
 
-- (NSDocument *)transientDocumentToReplace;
-- (void)replaceTransientDocument:(NSDocument *)transientDoc withDocument:(NSDocument *)doc display:(BOOL)displayDocument;
+- (MyDocument *)transientDocumentToReplace;
+- (void)displayDocument:(NSDocument *)doc;
+- (void)replaceTransientDocument:(NSArray *)documents;
 
 
 @end

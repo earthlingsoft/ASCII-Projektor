@@ -1,6 +1,6 @@
-v4
+v5
 
-* Localisations
+* Readme.md
 * Fix window behaviour on opening?
 * 1. Fenster vs Dateidoppelklick
 	* aktualisieren aus http://developer.apple.com/library/mac/#samplecode/TextEdit/Listings/DocumentController_m.html

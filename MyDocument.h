@@ -2,14 +2,12 @@
 //  MyDocument.h
 //  ASCII Projektor 2b
 //
-//  Created by  Sven on 19.08.07.
-//  Copyright earthlingsoft 2007 . All rights reserved.
+//  Created by Sven on 19.08.2007.
+//  Copyright earthlingsoft 2007-2015. All rights reserved.
 //
 
-
 #import <Cocoa/Cocoa.h>
-#import <QuartzComposer/QCView.h>
-#import <QTKit/QTMovie.h>
+@import Quartz;
 #import "ComboBoxDataSources.h"
 
 #define ASCIIPROJEKTORFILETYPE @"ASCII Projektion"
@@ -18,8 +16,7 @@
 #define DATAKEYS [NSArray arrayWithObjects:@"textureString", @"invertTexture", @"textureFont", @"backgroundColour", @"textColour", @"scale",  @"filmPath", @"fontSize", @"filmSource", @"reflect", @"backgroundEffect", @"backgroundContrast", @"backgroundSaturation", @"backgroundType", @"backgroundBlur", @"gamma", @"rotateTexture",  nil]
 
 
-@interface MyDocument : NSDocument <NSWindowDelegate>
-{
+@interface MyDocument : NSDocument <NSWindowDelegate> {
 	int filmSource;
 	NSString * filmPath;
 	NSString * textureString;

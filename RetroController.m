@@ -2,10 +2,11 @@
 //  RetroController.m
 //  ASCII Projektor 2b
 //
-//  Created by  Sven on 26.08.07.
-//  Copyright 2007 earthlingsoft. All rights reserved.
+//  Created by Sven on 26.08.2007.
+//  Copyright 2007-2015 earthlingsoft. All rights reserved.
 //
 
+@import AVFoundation;
 #import "RetroController.h"
 
 
@@ -15,15 +16,15 @@
 	//  
 	[retroWindow registerForDraggedTypes:[NSArray arrayWithObjects: NSFilenamesPboardType, nil]];
 	[[NSUserDefaultsController sharedUserDefaultsController] addObserver:self forKeyPath:@"values.retroFilmPath" options:(NSKeyValueObservingOptionNew) context:nil];
-	[movieView unregisterDraggedTypes];
+	[playerView unregisterDraggedTypes];
 }
 
 
 - (void) observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
 	// we're only observing the filmPath 
-	NSError * theErr;
-	QTMovie * theMovie = [QTMovie movieWithFile:[[NSUserDefaultsController sharedUserDefaultsController] valueForKeyPath:keyPath] error:&theErr];
-	[movieView setMovie:theMovie];
+	NSURL * filmURL = [NSURL fileURLWithPath:[[NSUserDefaultsController sharedUserDefaultsController] valueForKeyPath:keyPath]];
+	AVPlayer * player = [[AVPlayer alloc] initWithURL:filmURL];
+	[playerView setPlayer:player];
 }
 
 - (NSDragOperation)draggingEntered:(id <NSDraggingInfo>)sender {
@@ -32,7 +33,7 @@
     if ( [[pboard types] containsObject:NSFilenamesPboardType] ) {
 		NSArray *files = [pboard propertyListForType:NSFilenamesPboardType];
 		NSString * path = [files objectAtIndex:0];
-		if ([path APWillAcceptPath]) {
+		if (path.pathHasVideo) {
 			return NSDragOperationLink;
 		}
     }
@@ -86,7 +87,5 @@
 	NSDictionary * theError;
 	[theScript executeAndReturnError:&theError];
 }
-
-
 
 @end

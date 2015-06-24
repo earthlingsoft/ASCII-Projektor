@@ -19,14 +19,13 @@
 		6C97FB8A1B389E2000EEEBDE /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6CCB5E7B195DDBA60087949B /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6C97FB8B1B389E9E00EEEBDE /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CCB5E7B195DDBA60087949B /* Sparkle.framework */; };
 		6C97FB961B3A084900EEEBDE /* TileFilter.qtz in Resources */ = {isa = PBXBuildFile; fileRef = 6C97FB951B3A084900EEEBDE /* TileFilter.qtz */; };
+		6C97FB981B3A15B600EEEBDE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C97FB971B3A15B600EEEBDE /* AVFoundation.framework */; };
+		6C97FB9A1B3A23BF00EEEBDE /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C97FB991B3A23BF00EEEBDE /* AVKit.framework */; };
 		6C9FA45F0CC8C926000E2F7B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1660FE840EACC02AAC07 /* InfoPlist.strings */; };
 		6CA7F8BF0C7CD8D50021D876 /* esDroppable.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CA7F8BD0C7CD8D50021D876 /* esDroppable.m */; };
 		6CC9EE67173FF0B700B80EC4 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CC9EE65173FF0B700B80EC4 /* MainMenu.xib */; };
 		6CC9EE6D173FF12500B80EC4 /* MyDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CC9EE6C173FF12500B80EC4 /* MyDocument.xib */; };
-		6CC9EE85173FF50D00B80EC4 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13E42FBA07B3F13500E4EEF1 /* CoreData.framework */; };
-		6CC9EE86173FF50F00B80EC4 /* QuartzComposer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C1597BB0C785E6900635B8F /* QuartzComposer.framework */; };
 		6CC9EE87173FF51200B80EC4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */; };
-		6CC9EE88173FF51600B80EC4 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C0486F10C81F90A00509B4D /* QTKit.framework */; };
 		6CFD4A450C7E38EF00B1469F /* MyDocumentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFD4A440C7E38EF00B1469F /* MyDocumentController.m */; };
 		8D15AC2C0486D014006FF6A4 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */; };
 		8D15AC310486D014006FF6A4 /* MyDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4ACFDCFA73011CA2CEA /* MyDocument.m */; settings = {ATTRIBUTES = (); }; };
@@ -87,7 +86,6 @@
 /* Begin PBXFileReference section */
 		089C1660FE840EACC02AAC07 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
-		13E42FBA07B3F13500E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 		2A37F4ACFDCFA73011CA2CEA /* MyDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDocument.m; sourceTree = "<group>"; };
 		2A37F4AEFDCFA73011CA2CEA /* MyDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDocument.h; sourceTree = "<group>"; };
 		2A37F4B0FDCFA73011CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -95,9 +93,7 @@
 		6C0485910C81ADC200509B4D /* ASCIIMoviePlayer */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = ASCIIMoviePlayer; path = "../../../../Users/ssp/Developer/ASCII Projektor 1/ASCIIMoviePlayerSample+ES/ASCIIMoviePlayer"; sourceTree = DEVELOPER_DIR; };
 		6C0485CF0C81B04200509B4D /* RetroController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RetroController.h; sourceTree = "<group>"; };
 		6C0485D00C81B04200509B4D /* RetroController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RetroController.m; sourceTree = "<group>"; };
-		6C0486F10C81F90A00509B4D /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
 		6C0488C50C8242AC00509B4D /* ASCII-Projektor-File-Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = "ASCII-Projektor-File-Icon.icns"; path = "Extras/ASCII-Projektor-File-Icon.icns"; sourceTree = "<group>"; };
-		6C1597BB0C785E6900635B8F /* QuartzComposer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzComposer.framework; path = /System/Library/Frameworks/Quartz.framework/Versions/A/Frameworks/QuartzComposer.framework; sourceTree = "<absolute>"; };
 		6C1597CA0C78647800635B8F /* ComboBoxDataSources.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComboBoxDataSources.h; sourceTree = "<group>"; };
 		6C1597CB0C78647800635B8F /* ComboBoxDataSources.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComboBoxDataSources.m; sourceTree = "<group>"; };
 		6C15994E0C7888AD00635B8F /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
@@ -105,6 +101,9 @@
 		6C159B490C78AAA400635B8F /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6C159B4A0C78AAA400635B8F /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6C97FB951B3A084900EEEBDE /* TileFilter.qtz */ = {isa = PBXFileReference; lastKnownFileType = "video.quartz-composer"; path = TileFilter.qtz; sourceTree = "<group>"; };
+		6C97FB971B3A15B600EEEBDE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = ../../../../System/Library/Frameworks/AVFoundation.framework; sourceTree = "<group>"; };
+		6C97FB991B3A23BF00EEEBDE /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = ../../../../System/Library/Frameworks/AVKit.framework; sourceTree = "<group>"; };
+		6C97FB9B1B3A297500EEEBDE /* net.earthlingsoft.ASCIIProjektor.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; name = net.earthlingsoft.ASCIIProjektor.plist; path = ../../Library/Preferences/net.earthlingsoft.ASCIIProjektor.plist; sourceTree = "<group>"; };
 		6CA7F8BC0C7CD8D50021D876 /* esDroppable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = esDroppable.h; sourceTree = "<group>"; };
 		6CA7F8BD0C7CD8D50021D876 /* esDroppable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = esDroppable.m; sourceTree = "<group>"; };
 		6CC9EE62173FF03C00B80EC4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = "en.lproj/Version History.rtf"; sourceTree = "<group>"; };
@@ -133,11 +132,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6CC9EE85173FF50D00B80EC4 /* CoreData.framework in Frameworks */,
 				6CC9EE87173FF51200B80EC4 /* Cocoa.framework in Frameworks */,
-				6CC9EE88173FF51600B80EC4 /* QTKit.framework in Frameworks */,
+				6C97FB981B3A15B600EEEBDE /* AVFoundation.framework in Frameworks */,
+				6C97FB9A1B3A23BF00EEEBDE /* AVKit.framework in Frameworks */,
 				6C97FB8B1B389E9E00EEEBDE /* Sparkle.framework in Frameworks */,
-				6CC9EE86173FF50F00B80EC4 /* QuartzComposer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				6CC9EE891740095F00B80EC4 /* To Do */,
+				6C97FB9B1B3A297500EEEBDE /* net.earthlingsoft.ASCIIProjektor.plist */,
 				6CCB5E72195DDBA50087949B /* Sparkle.xcodeproj */,
 				2A37F4ABFDCFA73011CA2CEA /* Classes */,
 				2A37F4AFFDCFA73011CA2CEA /* Other Sources */,
@@ -216,9 +215,8 @@
 		2A37F4C3FDCFA73011CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				13E42FBA07B3F13500E4EEF1 /* CoreData.framework */,
-				6C1597BB0C785E6900635B8F /* QuartzComposer.framework */,
-				6C0486F10C81F90A00509B4D /* QTKit.framework */,
+				6C97FB991B3A23BF00EEEBDE /* AVKit.framework */,
+				6C97FB971B3A15B600EEEBDE /* AVFoundation.framework */,
 				1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */,
 			);
 			name = Frameworks;
@@ -337,17 +335,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C97FB961B3A084900EEEBDE /* TileFilter.qtz in Resources */,
+				6CC9EE67173FF0B700B80EC4 /* MainMenu.xib in Resources */,
+				6CC9EE6D173FF12500B80EC4 /* MyDocument.xib in Resources */,
+				6C159B550C78AC8F00635B8F /* Readme.rtf in Resources */,
+				6C159B5C0C78AE3200635B8F /* Version History.rtf in Resources */,
 				8D15AC2C0486D014006FF6A4 /* Credits.rtf in Resources */,
 				6C9FA45F0CC8C926000E2F7B /* InfoPlist.strings in Resources */,
 				6C15996F0C7889FE00635B8F /* Localizable.strings in Resources */,
 				6C159AC40C78A06600635B8F /* ASCII Projektor.icns in Resources */,
-				6C159B550C78AC8F00635B8F /* Readme.rtf in Resources */,
-				6C159B5C0C78AE3200635B8F /* Version History.rtf in Resources */,
-				6C0485920C81ADC200509B4D /* ASCIIMoviePlayer in Resources */,
 				6C0488C60C8242AC00509B4D /* ASCII-Projektor-File-Icon.icns in Resources */,
-				6C97FB961B3A084900EEEBDE /* TileFilter.qtz in Resources */,
-				6CC9EE67173FF0B700B80EC4 /* MainMenu.xib in Resources */,
-				6CC9EE6D173FF12500B80EC4 /* MyDocument.xib in Resources */,
+				6C0485920C81ADC200509B4D /* ASCIIMoviePlayer in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,13 +434,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "earthlingsoft Code Signing";
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
-					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_2)",
-					"\"$(SYSTEM_LIBRARY_DIR)/Frameworks/Quartz.framework/Versions/A/Frameworks\"",
-					"\"$(SRCROOT)/../../../../Library/Developer/Xcode/DerivedData/ASCII_Projektor-fpsbufjhqchijtfybujndfddrcqi/Build/Products/Release\"",
-				);
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = Info.plist;
 				PRODUCT_NAME = "ASCII Projektor";
@@ -455,13 +447,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "earthlingsoft Code Signing";
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
-					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_2)",
-					"\"$(SYSTEM_LIBRARY_DIR)/Frameworks/Quartz.framework/Versions/A/Frameworks\"",
-					"\"$(SRCROOT)/../../../../Library/Developer/Xcode/DerivedData/ASCII_Projektor-fpsbufjhqchijtfybujndfddrcqi/Build/Products/Release\"",
-				);
+				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = Info.plist;
 				PRODUCT_NAME = "ASCII Projektor";
 				WRAPPER_EXTENSION = app;
@@ -471,6 +457,7 @@
 		C05733CC08A9546B00998B17 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -478,20 +465,21 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "";
-				SDKROOT = macosx;
+				SDKROOT = macosx10.10;
 			};
 			name = Debug;
 		};
 		C05733CD08A9546B00998B17 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PROVISIONING_PROFILE = "";
-				SDKROOT = macosx;
+				SDKROOT = macosx10.10;
 			};
 			name = Release;
 		};

@@ -2,16 +2,14 @@
 //  AppDelegate.m
 //  ASCII Projektor 2b
 //
-//  Created by  Sven on 19.08.07.
-//  Copyright 2007 earthlingsoft. All rights reserved.
+//  Created by Sven on 19.08.2007.
+//  Copyright 2007-2015 earthlingsoft. All rights reserved.
 //
 
 #import "AppDelegate.h"
 
 
 @implementation AppDelegate
-
-
 
 + (void) initialize {
 	[[NSUserDefaultsController sharedUserDefaultsController] setInitialValues:[NSDictionary dictionaryWithObjectsAndKeys:
@@ -65,12 +63,13 @@
 }
 
 
+
+
+
 #pragma mark UTILITY
 
 - (NSString*) myVersionString {
 	return [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
 }
-
-
 
 @end

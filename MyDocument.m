@@ -2,11 +2,13 @@
 //  MyDocument.m
 //  ASCII Projektor 2b
 //
-//  Created by  Sven on 19.08.07.
-//  Copyright earthlingsoft 2007 . All rights reserved.
+//  Created by Sven on 19.08.2007.
+//  Copyright earthlingsoft 2007-2015. All rights reserved.
 //
 
 #import "MyDocument.h"
+@import AVFoundation;
+
 #define UDC [NSUserDefaultsController sharedUserDefaultsController]
 
 @implementation MyDocument
@@ -53,7 +55,7 @@
 
 - (void) awakeFromNib {
 	// set up QCView
-	BOOL loadResult = [qcView loadCompositionFromFile:[[NSBundle mainBundle] pathForResource:@"TileFilter" ofType:@"qtz"]];
+	[qcView loadCompositionFromFile:[[NSBundle mainBundle] pathForResource:@"TileFilter" ofType:@"qtz"]];
 	[qcView startRendering];
 	
 	// observe value changes
@@ -176,10 +178,13 @@
 			 [self updateScaleForSize:NSMakeSize(640.0, 480.0)]; // assume this size for camera
 		}
 		else if (newSource == 1 ) {
-			NSError * theErr;
-			QTMovie * theMovie = [QTMovie movieWithFile:[self valueForKey:@"filmPath"] error:&theErr];
-			NSSize movieSize = [[theMovie attributeForKey:QTMovieNaturalSizeAttribute] sizeValue];
-			[self updateScaleForSize:movieSize];			
+			AVAsset * asset = [AVAsset assetWithURL:[NSURL fileURLWithPath:[self valueForKey:@"filmPath"]]];
+			NSArray * videoTracks = [asset tracksWithMediaCharacteristic:AVMediaCharacteristicVisual];
+			if (videoTracks.count > 0) {
+				AVAssetTrack * videoTrack = videoTracks[0];
+				NSSize movieSize = NSSizeFromCGSize(videoTrack.naturalSize);
+				[self updateScaleForSize:movieSize];
+			}
 		}
 	}
 	else if ([keyPath isEqualToString:@"textureString"]) {

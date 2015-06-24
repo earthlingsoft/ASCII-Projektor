@@ -28,6 +28,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="681" height="379"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="eraseColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <connections>
+                            <outlet property="document" destination="-2" id="Tza-b6-vdC"/>
+                        </connections>
                     </qcView>
                 </subviews>
             </view>

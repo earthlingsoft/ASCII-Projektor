@@ -2,19 +2,18 @@
 //  RetroController.h
 //  ASCII Projektor 2b
 //
-//  Created by  Sven on 26.08.07.
-//  Copyright 2007 earthlingsoft. All rights reserved.
+//  Created by Sven on 26.08.2007.
+//  Copyright 2007-2015 earthlingsoft. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
-#import <QTKit/QTKit.h>
+@import Cocoa;
+@import AVKit;
 #import "esDroppable.h"
 
 @interface RetroController : NSObject {
-	IBOutlet QTMovieView * movieView;
+	IBOutlet AVPlayerView * playerView;
 	IBOutlet NSTextField * pathField;
 	IBOutlet NSWindow * retroWindow;
-//	NSString * retroFilmPath;
 }
 
 - (IBAction) playInTerminal:(id)sender;

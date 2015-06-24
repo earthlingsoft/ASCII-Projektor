@@ -2,8 +2,8 @@
 //  ComboBoxDataSources.m
 //  ASCII Projektor 2b
 //
-//  Created by  Sven on 19.08.07.
-//  Copyright 2007 earthlingsoft. All rights reserved.
+//  Created by  Sven on 19.08.2007.
+//  Copyright 2007-2015 earthlingsoft. All rights reserved.
 //
 
 #import "ComboBoxDataSources.h"

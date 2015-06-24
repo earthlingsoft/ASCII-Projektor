@@ -2,8 +2,8 @@
 //  MyDocumentController.m
 //  ASCII Projektor
 //
-//  Created by Sven on 23.08.07.
-//  Copyright 2007 earthlingsoft. All rights reserved.
+//  Created by Sven on 23.08.2007.
+//  Copyright 2007-2015 earthlingsoft. All rights reserved.
 //
 
 #import "MyDocumentController.h"

@@ -101,7 +101,7 @@
 		6C0485910C81ADC200509B4D /* ASCIIMoviePlayer */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = ASCIIMoviePlayer; path = "../../../../Users/ssp/Developer/ASCII Projektor 1/ASCIIMoviePlayerSample+ES/ASCIIMoviePlayer"; sourceTree = DEVELOPER_DIR; };
 		6C0485CF0C81B04200509B4D /* RetroController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RetroController.h; sourceTree = "<group>"; };
 		6C0485D00C81B04200509B4D /* RetroController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RetroController.m; sourceTree = "<group>"; };
-		6C0488C50C8242AC00509B4D /* ASCII-Projektor-File-Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = "ASCII-Projektor-File-Icon.icns"; path = "Extras/ASCII-Projektor-File-Icon.icns"; sourceTree = "<group>"; };
+		6C0488C50C8242AC00509B4D /* ASCII-Projektor-File-Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "ASCII-Projektor-File-Icon.icns"; sourceTree = "<group>"; };
 		6C1597CA0C78647800635B8F /* ComboBoxDataSources.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComboBoxDataSources.h; sourceTree = "<group>"; };
 		6C1597CB0C78647800635B8F /* ComboBoxDataSources.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComboBoxDataSources.m; sourceTree = "<group>"; };
 		6C15994E0C7888AD00635B8F /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
@@ -192,6 +192,7 @@
 				6C0485D00C81B04200509B4D /* RetroController.m */,
 			);
 			name = Classes;
+			path = Code;
 			sourceTree = "<group>";
 		};
 		2A37F4AFFDCFA73011CA2CEA /* Other Sources */ = {
@@ -201,6 +202,7 @@
 				2A37F4B0FDCFA73011CA2CEA /* main.m */,
 			);
 			name = "Other Sources";
+			path = Code;
 			sourceTree = "<group>";
 		};
 		2A37F4B8FDCFA73011CA2CEA /* Resources */ = {
@@ -219,7 +221,7 @@
 				089C1660FE840EACC02AAC07 /* InfoPlist.strings */,
 				6C15994E0C7888AD00635B8F /* Localizable.strings */,
 			);
-			name = Resources;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		2A37F4C3FDCFA73011CA2CEA /* Frameworks */ = {
@@ -455,7 +457,7 @@
 				CLANG_MODULES_AUTOLINK = NO;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks";
 				PRODUCT_NAME = "ASCII Projektor";
 				WRAPPER_EXTENSION = app;
@@ -467,7 +469,7 @@
 			buildSettings = {
 				CLANG_MODULES_AUTOLINK = NO;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks";
 				PRODUCT_NAME = "ASCII Projektor";
 				WRAPPER_EXTENSION = app;

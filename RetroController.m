@@ -6,8 +6,8 @@
 //  Copyright 2007-2015 earthlingsoft. All rights reserved.
 //
 
-@import AVFoundation;
 #import "RetroController.h"
+@import AVFoundation;
 
 
 @implementation RetroController

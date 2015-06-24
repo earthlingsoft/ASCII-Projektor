@@ -1,12 +1,9 @@
 v4
 
 * Localisations
-* Fix Terminal Player?
 * Fix window behaviour on opening?
-* Überflüssige Dateien / Binaries entfernen
-	* Sparkle Header
-	* Sparkle Lokalisierungen
 * 1. Fenster vs Dateidoppelklick
 	* aktualisieren aus http://developer.apple.com/library/mac/#samplecode/TextEdit/Listings/DocumentController_m.html
 * französiche Lokalisierung (Readme / Menüs)
 * Update XML
+* Fix Terminal Player?

@@ -6,7 +6,7 @@
 //  Copyright earthlingsoft 2007-2015. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+@import Cocoa;
 @import Quartz;
 #import "ComboBoxDataSources.h"
 

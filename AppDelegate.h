@@ -7,7 +7,6 @@
 //
 
 @import Cocoa;
-#import "MyDocument.h"
 
 
 @interface AppDelegate : NSObject {

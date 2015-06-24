@@ -27,8 +27,9 @@
 		6CC9EE87173FF51200B80EC4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */; };
 		6CCB50B41B3B4CE0001BCCA6 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6CCB5E7B195DDBA60087949B /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6CCB50B51B3B4CFD001BCCA6 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CCB5E7B195DDBA60087949B /* Sparkle.framework */; };
+		6CCB50B71B3B6C7A001BCCA6 /* Readme.md in Sources */ = {isa = PBXBuildFile; fileRef = 6CCB50B61B3B6C7A001BCCA6 /* Readme.md */; };
+		6CCB50B91B3B71DC001BCCA6 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 6CCB50B81B3B71DC001BCCA6 /* Credits.rtf */; };
 		6CFD4A450C7E38EF00B1469F /* MyDocumentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFD4A440C7E38EF00B1469F /* MyDocumentController.m */; };
-		8D15AC2C0486D014006FF6A4 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */; };
 		8D15AC310486D014006FF6A4 /* MyDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4ACFDCFA73011CA2CEA /* MyDocument.m */; settings = {ATTRIBUTES = (); }; };
 		8D15AC320486D014006FF6A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4B0FDCFA73011CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 /* End PBXBuildFile section */
@@ -117,17 +118,16 @@
 		6CA7F8BD0C7CD8D50021D876 /* esDroppable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = esDroppable.m; sourceTree = "<group>"; };
 		6CC9EE62173FF03C00B80EC4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = "en.lproj/Version History.rtf"; sourceTree = "<group>"; };
 		6CC9EE63173FF04600B80EC4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Readme.rtf; sourceTree = "<group>"; };
-		6CC9EE64173FF05600B80EC4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		6CC9EE66173FF0B700B80EC4 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		6CC9EE68173FF0BC00B80EC4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		6CC9EE69173FF0BF00B80EC4 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		6CC9EE6C173FF12500B80EC4 /* MyDocument.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyDocument.xib; sourceTree = "<group>"; };
-		6CC9EE891740095F00B80EC4 /* To Do */ = {isa = PBXFileReference; lastKnownFileType = text; path = "To Do"; sourceTree = "<group>"; };
+		6CC9EE891740095F00B80EC4 /* To Do.text */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "To Do.text"; sourceTree = "<group>"; };
+		6CCB50B61B3B6C7A001BCCA6 /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
+		6CCB50B81B3B71DC001BCCA6 /* Credits.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
 		6CCB5E72195DDBA50087949B /* Sparkle.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Sparkle.xcodeproj; path = sparkle/Sparkle.xcodeproj; sourceTree = "<group>"; };
-		6CF7CF170C83131800B926E9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = fr; path = fr.lproj/Credits.rtf; sourceTree = "<group>"; };
 		6CF7CF180C83131F00B926E9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = fr; path = fr.lproj/Readme.rtf; sourceTree = "<group>"; };
 		6CF7CF190C83132500B926E9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = fr; path = "fr.lproj/Version History.rtf"; sourceTree = "<group>"; };
-		6CF7CF210C83140000B926E9 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = de; path = de.lproj/Credits.rtf; sourceTree = "<group>"; };
 		6CF7CF220C83140400B926E9 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = de; path = de.lproj/Readme.rtf; sourceTree = "<group>"; };
 		6CF7CF230C83140700B926E9 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = de; path = "de.lproj/Version History.rtf"; sourceTree = "<group>"; };
 		6CF7CFDD0C837F4E00B926E9 /* MyDocumentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDocumentController.h; sourceTree = "<group>"; };
@@ -163,8 +163,9 @@
 		2A37F4AAFDCFA73011CA2CEA /* ASCII Projektor 2b */ = {
 			isa = PBXGroup;
 			children = (
-				6CC9EE891740095F00B80EC4 /* To Do */,
+				6CC9EE891740095F00B80EC4 /* To Do.text */,
 				6C97FB9B1B3A297500EEEBDE /* net.earthlingsoft.ASCIIProjektor.plist */,
+				6CCB50B61B3B6C7A001BCCA6 /* Readme.md */,
 				6CCB5E72195DDBA50087949B /* Sparkle.xcodeproj */,
 				2A37F4ABFDCFA73011CA2CEA /* Classes */,
 				2A37F4AFFDCFA73011CA2CEA /* Other Sources */,
@@ -216,7 +217,7 @@
 				6CC9EE65173FF0B700B80EC4 /* MainMenu.xib */,
 				6C159B5A0C78AE3200635B8F /* Version History.rtf */,
 				6C159B530C78AC8F00635B8F /* Readme.rtf */,
-				2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */,
+				6CCB50B81B3B71DC001BCCA6 /* Credits.rtf */,
 				8D15AC360486D014006FF6A4 /* Info.plist */,
 				089C1660FE840EACC02AAC07 /* InfoPlist.strings */,
 				6C15994E0C7888AD00635B8F /* Localizable.strings */,
@@ -354,10 +355,10 @@
 				6CC9EE6D173FF12500B80EC4 /* MyDocument.xib in Resources */,
 				6C159B550C78AC8F00635B8F /* Readme.rtf in Resources */,
 				6C159B5C0C78AE3200635B8F /* Version History.rtf in Resources */,
-				8D15AC2C0486D014006FF6A4 /* Credits.rtf in Resources */,
 				6C9FA45F0CC8C926000E2F7B /* InfoPlist.strings in Resources */,
 				6C15996F0C7889FE00635B8F /* Localizable.strings in Resources */,
 				6C159AC40C78A06600635B8F /* ASCII Projektor.icns in Resources */,
+				6CCB50B91B3B71DC001BCCA6 /* Credits.rtf in Resources */,
 				6C0488C60C8242AC00509B4D /* ASCII-Projektor-File-Icon.icns in Resources */,
 				6C0485920C81ADC200509B4D /* ASCIIMoviePlayer in Resources */,
 			);
@@ -393,6 +394,7 @@
 				6C159B4C0C78AAA400635B8F /* AppDelegate.m in Sources */,
 				6CA7F8BF0C7CD8D50021D876 /* esDroppable.m in Sources */,
 				6CFD4A450C7E38EF00B1469F /* MyDocumentController.m in Sources */,
+				6CCB50B71B3B6C7A001BCCA6 /* Readme.md in Sources */,
 				6C0485D20C81B04200509B4D /* RetroController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -408,16 +410,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6CF7CF170C83131800B926E9 /* fr */,
-				6CF7CF210C83140000B926E9 /* de */,
-				6CC9EE64173FF05600B80EC4 /* en */,
-			);
-			name = Credits.rtf;
-			sourceTree = "<group>";
-		};
 		6C159B530C78AC8F00635B8F /* Readme.rtf */ = {
 			isa = PBXVariantGroup;
 			children = (

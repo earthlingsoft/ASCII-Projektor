@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="7706" systemVersion="14E36b" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+    <dependencies>
+        <deployment version="1080" identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7706"/>
+        <plugIn identifier="com.apple.QuartzComposerIBPlugin" version="7706"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="MyDocument">
+            <connections>
+                <outlet property="qcView" destination="o6g-Gs-B6r" id="2y6-e2-erW"/>
+                <outlet property="window" destination="1" id="7"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" showsToolbarButton="NO" animationBehavior="default" id="1">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowCollectionBehavior key="collectionBehavior" fullScreenPrimary="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" topStrut="YES"/>
+            <rect key="contentRect" x="58" y="741" width="681" height="379"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1178"/>
+            <view key="contentView" id="2">
+                <rect key="frame" x="0.0" y="0.0" width="681" height="379"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <qcView id="o6g-Gs-B6r" customClass="esDroppableQCView">
+                        <rect key="frame" x="0.0" y="0.0" width="681" height="379"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="eraseColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <connections>
+                            <outlet property="document" destination="-2" id="Tza-b6-vdC"/>
+                        </connections>
+                    </qcView>
+                </subviews>
+            </view>
+            <connections>
+                <outlet property="delegate" destination="-2" id="9"/>
+            </connections>
+            <point key="canvasLocation" x="515.5" y="460.5"/>
+        </window>
+    </objects>
+</document>

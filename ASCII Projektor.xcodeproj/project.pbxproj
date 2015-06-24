@@ -16,16 +16,17 @@
 		6C159B4C0C78AAA400635B8F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C159B4A0C78AAA400635B8F /* AppDelegate.m */; };
 		6C159B550C78AC8F00635B8F /* Readme.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 6C159B530C78AC8F00635B8F /* Readme.rtf */; };
 		6C159B5C0C78AE3200635B8F /* Version History.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 6C159B5A0C78AE3200635B8F /* Version History.rtf */; };
-		6C97FB8A1B389E2000EEEBDE /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6CCB5E7B195DDBA60087949B /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		6C97FB8B1B389E9E00EEEBDE /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CCB5E7B195DDBA60087949B /* Sparkle.framework */; };
 		6C97FB961B3A084900EEEBDE /* TileFilter.qtz in Resources */ = {isa = PBXBuildFile; fileRef = 6C97FB951B3A084900EEEBDE /* TileFilter.qtz */; };
 		6C97FB981B3A15B600EEEBDE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C97FB971B3A15B600EEEBDE /* AVFoundation.framework */; };
 		6C97FB9A1B3A23BF00EEEBDE /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C97FB991B3A23BF00EEEBDE /* AVKit.framework */; };
+		6C97FBB51B3A3ABA00EEEBDE /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C97FBB41B3A3ABA00EEEBDE /* Quartz.framework */; };
 		6C9FA45F0CC8C926000E2F7B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1660FE840EACC02AAC07 /* InfoPlist.strings */; };
 		6CA7F8BF0C7CD8D50021D876 /* esDroppable.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CA7F8BD0C7CD8D50021D876 /* esDroppable.m */; };
 		6CC9EE67173FF0B700B80EC4 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CC9EE65173FF0B700B80EC4 /* MainMenu.xib */; };
 		6CC9EE6D173FF12500B80EC4 /* MyDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CC9EE6C173FF12500B80EC4 /* MyDocument.xib */; };
 		6CC9EE87173FF51200B80EC4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */; };
+		6CCB50B41B3B4CE0001BCCA6 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6CCB5E7B195DDBA60087949B /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6CCB50B51B3B4CFD001BCCA6 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CCB5E7B195DDBA60087949B /* Sparkle.framework */; };
 		6CFD4A450C7E38EF00B1469F /* MyDocumentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFD4A440C7E38EF00B1469F /* MyDocumentController.m */; };
 		8D15AC2C0486D014006FF6A4 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */; };
 		8D15AC310486D014006FF6A4 /* MyDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4ACFDCFA73011CA2CEA /* MyDocument.m */; settings = {ATTRIBUTES = (); }; };
@@ -33,6 +34,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		6C97FBB71B3B4BAA00EEEBDE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6CCB5E72195DDBA50087949B /* Sparkle.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
+			remoteInfo = Sparkle;
+		};
 		6CCB5E7A195DDBA60087949B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6CCB5E72195DDBA50087949B /* Sparkle.xcodeproj */;
@@ -71,13 +79,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		6C159B010C78A21300635B8F /* CopyFiles */ = {
+		6CCB50B31B3B4CC3001BCCA6 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				6C97FB8A1B389E2000EEEBDE /* Sparkle.framework in CopyFiles */,
+				6CCB50B41B3B4CE0001BCCA6 /* Sparkle.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +112,7 @@
 		6C97FB971B3A15B600EEEBDE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = ../../../../System/Library/Frameworks/AVFoundation.framework; sourceTree = "<group>"; };
 		6C97FB991B3A23BF00EEEBDE /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = ../../../../System/Library/Frameworks/AVKit.framework; sourceTree = "<group>"; };
 		6C97FB9B1B3A297500EEEBDE /* net.earthlingsoft.ASCIIProjektor.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; name = net.earthlingsoft.ASCIIProjektor.plist; path = ../../Library/Preferences/net.earthlingsoft.ASCIIProjektor.plist; sourceTree = "<group>"; };
+		6C97FBB41B3A3ABA00EEEBDE /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = ../../../../System/Library/Frameworks/Quartz.framework; sourceTree = "<group>"; };
 		6CA7F8BC0C7CD8D50021D876 /* esDroppable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = esDroppable.h; sourceTree = "<group>"; };
 		6CA7F8BD0C7CD8D50021D876 /* esDroppable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = esDroppable.m; sourceTree = "<group>"; };
 		6CC9EE62173FF03C00B80EC4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = "en.lproj/Version History.rtf"; sourceTree = "<group>"; };
@@ -134,8 +143,9 @@
 			files = (
 				6CC9EE87173FF51200B80EC4 /* Cocoa.framework in Frameworks */,
 				6C97FB981B3A15B600EEEBDE /* AVFoundation.framework in Frameworks */,
+				6C97FBB51B3A3ABA00EEEBDE /* Quartz.framework in Frameworks */,
 				6C97FB9A1B3A23BF00EEEBDE /* AVKit.framework in Frameworks */,
-				6C97FB8B1B389E9E00EEEBDE /* Sparkle.framework in Frameworks */,
+				6CCB50B51B3B4CFD001BCCA6 /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,6 +225,7 @@
 		2A37F4C3FDCFA73011CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6C97FBB41B3A3ABA00EEEBDE /* Quartz.framework */,
 				6C97FB991B3A23BF00EEEBDE /* AVKit.framework */,
 				6C97FB971B3A15B600EEEBDE /* AVFoundation.framework */,
 				1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */,
@@ -243,13 +254,14 @@
 			buildPhases = (
 				8D15AC300486D014006FF6A4 /* Sources */,
 				8D15AC2B0486D014006FF6A4 /* Resources */,
-				6C159B010C78A21300635B8F /* CopyFiles */,
+				6CCB50B31B3B4CC3001BCCA6 /* CopyFiles */,
 				8D15AC330486D014006FF6A4 /* Frameworks */,
 				6C95D0741741913400F94FFD /* Run Script: Remove headers and superfluous Localisations */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				6C97FBB81B3B4BAA00EEEBDE /* PBXTargetDependency */,
 			);
 			name = "ASCII Projektor";
 			productInstallPath = "$(HOME)/Applications";
@@ -385,6 +397,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		6C97FBB81B3B4BAA00EEEBDE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Sparkle;
+			targetProxy = 6C97FBB71B3B4BAA00EEEBDE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */ = {
 			isa = PBXVariantGroup;
@@ -432,11 +452,11 @@
 		C05733C808A9546B00998B17 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "earthlingsoft Code Signing";
+				CLANG_MODULES_AUTOLINK = NO;
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks";
 				PRODUCT_NAME = "ASCII Projektor";
 				WRAPPER_EXTENSION = app;
 			};
@@ -445,10 +465,10 @@
 		C05733C908A9546B00998B17 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "earthlingsoft Code Signing";
+				CLANG_MODULES_AUTOLINK = NO;
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks";
 				PRODUCT_NAME = "ASCII Projektor";
 				WRAPPER_EXTENSION = app;
 			};
@@ -459,13 +479,14 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "";
+				CLANG_MODULES_AUTOLINK = YES;
+				CODE_SIGN_IDENTITY = "earthlingsoft Code Signing";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "";
-				SDKROOT = macosx10.10;
+				SDKROOT = macosx10.9;
 			};
 			name = Debug;
 		};
@@ -474,12 +495,13 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "";
+				CLANG_MODULES_AUTOLINK = YES;
+				CODE_SIGN_IDENTITY = "earthlingsoft Code Signing";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PROVISIONING_PROFILE = "";
-				SDKROOT = macosx10.10;
+				SDKROOT = macosx10.9;
 			};
 			name = Release;
 		};

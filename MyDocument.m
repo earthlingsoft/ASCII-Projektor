@@ -8,6 +8,7 @@
 
 #import "MyDocument.h"
 @import AVFoundation;
+#import "esDroppable.h"
 
 #define UDC [NSUserDefaultsController sharedUserDefaultsController]
 
@@ -101,10 +102,15 @@
 }
 
 
-- (BOOL)readFromURL:(NSURL *)aURL ofType:(NSString *)docType error:(NSError **)outError  {
-	if ([docType isEqualToString:ASCIIPROJEKTORFILETYPE]) {
+- (BOOL)readFromURL:(NSURL *)URL ofType:(NSString *)docType error:(NSError **)outError  {
+	if (![URL isFileURL]) {
+		return NO;
+	}
+	NSString * path = [URL path];
+	
+	if ([path fileAtPathConformsToUTI:ASCIIPROJEKTION_UTI]) {
 		// we've got our own file, so parse it
-		NSDictionary * dict = [NSDictionary dictionaryWithContentsOfURL:aURL];
+		NSDictionary * dict = [NSDictionary dictionaryWithContentsOfURL:URL];
 		if (!dict) return NO;
 		NSEnumerator * keyEnumerator = [DATAKEYS objectEnumerator];
 		NSString * s;
@@ -121,11 +127,9 @@
 		[self updateChangeCount:NSChangeCleared];
 		return YES;
 	}
-	else if ([docType isEqualToString:FILMFILETYPE]) {
+	else if (path.pathHasVideo) {
 		// a film file was dropped, try to open it
-		if (![aURL isFileURL]) return NO;
-		// NSLog([NSString stringWithFormat:@"%i" , [QTMovie canInitWithURL:aURL]]);
-		[self setValue:[aURL path] forKey:@"filmPath"];
+		[self setValue:path forKey:@"filmPath"];
 		[self updateChangeCount:NSChangeReadOtherContents];
 		return YES;
 	}

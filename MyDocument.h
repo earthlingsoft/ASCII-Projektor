@@ -10,8 +10,7 @@
 @import Quartz;
 #import "ComboBoxDataSources.h"
 
-#define ASCIIPROJEKTORFILETYPE @"ASCII Projektion"
-#define FILMFILETYPE @"Film"
+#define ASCIIPROJEKTION_UTI @"net.earthlingsoft.asciiprojektor2.document"
 
 #define DATAKEYS [NSArray arrayWithObjects:@"textureString", @"invertTexture", @"textureFont", @"backgroundColour", @"textColour", @"scale",  @"filmPath", @"fontSize", @"filmSource", @"reflect", @"backgroundEffect", @"backgroundContrast", @"backgroundSaturation", @"backgroundType", @"backgroundBlur", @"gamma", @"rotateTexture",  nil]
 

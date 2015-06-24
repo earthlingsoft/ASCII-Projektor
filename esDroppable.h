@@ -24,4 +24,5 @@
 
 @interface NSString (esUTICheck) 
 @property (readonly, nonatomic) BOOL pathHasVideo;
+- (BOOL) fileAtPathConformsToUTI:(NSString *)UTI;
 @end
